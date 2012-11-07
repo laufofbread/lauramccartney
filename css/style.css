@@ -9,12 +9,12 @@ body {
 #box {
 	background: rgba(255,255,255,0.8);
 	color: #333;
-	height: 400px;
+	height: 460px;
 	width: 560px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-top: -200px;
+	margin-top: -230px;
 	margin-left: -280px;
 	padding: 30px;
 	font-size: 18px;
@@ -36,12 +36,17 @@ body {
 
 p {
 	margin: 5px;
+	padding-top: 10px;
 }
 
 /*Style for Hiya and Yay*/
 .first, .last {
-	font-size:  90px;
-	font-weight: 200;
+	font-family: 'cooper_black_bqregular';
+	font-size: 90px;
+	font-weight: normal;
+	line-height: 100px;
+	display: inline-block;
+	margin-top: -40px;
 }
 	
 .last {
@@ -50,8 +55,7 @@ p {
 }
 
 .first {
-	position: absolute;
-	top:-30px;
+	padding-top: 20px;
 }
 	
 /* Style for links */
