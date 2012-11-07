@@ -38,6 +38,11 @@ body {
 	-webkit-animation-duration: .5s;
 	-webkit-animation-iteration-count: 1;
 	-webkit-animation-timing-function: ease-in;
+	
+	-moz-animation-name: open;
+	-moz-animation-duration: .5s;
+	-moz-animation-iteration-count: 1;
+	-moz-animation-timing-function: ease-in;
 }
 
 p {
@@ -90,5 +95,20 @@ a:hover {
 		}
 	to {
 			-webkit-transform: scale(1);
+		}
+	}
+	
+	
+@-moz-keyframes open {
+	from {
+			-moz-transform: scale(.1);
+			opacity: 0;
+		}
+	85% {
+			-moz-transform: scale(1.05);
+			opacity: 1;
+		}
+	to {
+			-moz-transform: scale(1);
 		}
 	}
