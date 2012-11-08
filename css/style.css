@@ -2,8 +2,7 @@
 
 
 body {
-	background-image: url('../img/background_tile.png');
-	background-repeat: repeat; 
+	background-color: #666;
 	}
 	
 #box {
