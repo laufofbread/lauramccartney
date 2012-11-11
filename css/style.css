@@ -70,16 +70,30 @@ p {
 }
 	
 /* Style for links */
-a {
-	color:			#666;
-	text-shadow:	none;
+a.red {
+	color: #d1261e;
+}
+
+a.blue {
+	color: #6167e6;
+}
+
+a.green {
+	color: #3db322;
+}
+
+a.purple {
+	color: #a12cbb;
+}
+
+
+
+a, a:hover {
+	color: #999;
 	text-decoration: none;
 }
 
-a:hover {
-	color:			#999;
-	text-decoration: none;
-}
+
 
 	
 /*animation*/
