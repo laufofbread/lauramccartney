@@ -99,7 +99,10 @@ p {
     width:  200px;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 698px) {
+    html {
+        height: auto;
+    }
     
     .wrapper {
         position:   static;
