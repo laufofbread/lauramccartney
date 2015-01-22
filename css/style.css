@@ -16,14 +16,14 @@ body {
     
     font-family: 'Varela Round', 'Source Sans Pro', helvetica, arial, sans-serif;
     font-size:  18px;
+    line-height:    26px;
     margin: 0;
     color:  #666;
-    
 }
 
 .hiya {
     margin: 40px 0 20px 0;
-    width: 60px;
+    width: 65px;
     white-space:nowrap;
     overflow:hidden;
     border-right: 2px solid #666;
@@ -84,12 +84,6 @@ p {
     margin: 8px 0;
 }
 
-/*.projects-list {
-    border-left:    1px solid #fff;
-    border-right:    1px solid #fff;
-    padding:    0 20px;
-}*/
-
 .skills-list {
     border-right:    1px solid #fff;
     padding-right:   40px;
@@ -104,8 +98,46 @@ p {
     width:  200px;
 }
 
+@media only screen and (max-width: 680px) {
+    
+    .wrapper {
+        position:   static;
+        margin: 100px 30px 30px 30px;
+    }
+    
+    ul {
+        display:    block;
+    }
+    
+    .skills-list {
+        border: 0;
+    }
+    
+    .contact-list {
+        padding-left:   0;
+    }
+    
+    .skills-list li {
+        margin: 0;
+    }
+    
+    .list-header, .skills-list .list-header {
+        margin-bottom:  10px;
+        text-decoration:    underline;
+    }
+    
+}
+
+@media only screen and (max-width: 400px) {
+    
+    .wrapper {
+        margin: 100px 20px 20px 20px;
+    }
+    
+}
 
 
+/* Animation for hiya type */
 @-webkit-keyframes typing {
     from { width: 0; }
     to { width:65px; }
@@ -126,4 +158,8 @@ p {
     50% { border-color: #666 }
     
     
+
+
+
+
 
