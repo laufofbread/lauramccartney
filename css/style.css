@@ -5,6 +5,7 @@ html {
 }
 
 body {
+    height: 100%;
     background: url('/img/poly-bg.png'),rgb(255,232,237); /* Old browsers */
     background: url('/img/poly-bg.png'),-moz-linear-gradient(top,  rgba(255,232,237,1) 0%, rgba(255,255,224,1) 100%); /* FF3.6+ */
     background: url('/img/poly-bg.png'),-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,232,237,1)), color-stop(100%,rgba(255,255,224,1))); /* Chrome,Safari4+ */
@@ -90,7 +91,7 @@ p {
 }
 
 .skills-list li {
-    margin:  16px 0;
+    margin:  12px 0;
 }
 
 .contact-list {
@@ -131,7 +132,7 @@ p {
 @media only screen and (max-width: 400px) {
     
     .wrapper {
-        margin: 100px 20px 20px 20px;
+        margin: 100px 20px 30px 20px;
     }
     
 }
