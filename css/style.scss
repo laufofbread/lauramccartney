@@ -65,20 +65,23 @@ li {
 }
 
 a {
-    
     text-decoration:    none;
     color:  #666;
+	
+	&:hover {
+		svg, path {
+		    transition: fill 0.2s ease;
+		    fill:  #ccc;
+		}
+	}
 }
 
-.fa {
+svg, path {
     vertical-align: sub;
     margin-right:   20px;
-    font-size:  32px;
-}
-
-a:hover i {
-    transition: color 0.5s ease;
-    color:  #ccc;
+    width:	27px;
+	height:	auto;
+	fill:	#666;
 }
 
 p {
@@ -88,15 +91,25 @@ p {
 .skills-list {
     border-right:    1px solid #fff;
     padding-right:   40px;
+	
+	li {
+	    margin:  12px 0;
+	}
 }
 
-.skills-list li {
-    margin:  12px 0;
-}
+
 
 .contact-list {
     padding-left:   40px;
     width:  200px;
+	
+	li {
+		margin:	8px 0;
+		
+		&:first-child {
+			margin-bottom:	15px;
+		}
+	}
 }
 
 @media only screen and (max-width: 698px) {
