@@ -1,0 +1,45 @@
+html {
+  font-family: "Frank Ruhl Libre", serif;
+  color: $grey;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1 {
+
+  font-weight: 500;
+  font-size: 3em;
+}
+
+p {
+  margin:  .5em 0;
+  color: $light-grey;
+}
+
+.homepage-bg {
+  $border: 0;
+
+  position: absolute;
+  top: $border;
+  right: $border;
+  bottom: $border;
+  left: $border;
+
+  background: url("/img/P7061633.jpg") center / contain no-repeat;
+  padding:  0 2em;
+
+  h1 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 0;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: .1em;
+      right: .6em;
+      left: .05em;
+      height: 2px;
+      background-color: $grey;
+    }
+  }
+}

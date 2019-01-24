@@ -1,0 +1,12 @@
+$grey: #333;
+$light-grey: #aaa;
+
+@mixin size($width, $height) {
+  width:  $width;
+  height: $height;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:500');
+
+@import "normalize",
+        "main";
