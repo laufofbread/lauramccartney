@@ -14,7 +14,7 @@ body {
     background: url('/img/poly-bg.png'),-ms-linear-gradient(top,  rgba(255,232,237,1) 0%,rgba(255,255,224,1) 100%); /* IE10+ */
     background: url('/img/poly-bg.png'),linear-gradient(to bottom,  rgba(255,232,237,1) 0%,rgba(255,255,224,1) 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffe8ed', endColorstr='#ffffe0',GradientType=0 ); /* IE6-9 */
-    
+
     font-family: 'Varela Round', 'Source Sans Pro', helvetica, arial, sans-serif;
     font-size:  18px;
     line-height:    26px;
@@ -28,9 +28,9 @@ body {
     white-space:nowrap;
     overflow:hidden;
     border-right: 2px solid #666;
-    -webkit-animation: typing 1s steps(8, end), 
+    -webkit-animation: typing 1s steps(8, end),
                         blink-caret 2s step-end infinite;
-    -moz-animation: typing 1s steps(8, end), 
+    -moz-animation: typing 1s steps(8, end),
                         blink-caret 2s step-end infinite;
 }
 
@@ -53,7 +53,7 @@ ul {
 li {
     width:  100%;
     margin-bottom:  5px;
-    
+
 }
 
 .list-header {
@@ -67,7 +67,7 @@ li {
 a {
     text-decoration:    none;
     color:  #666;
-	
+
 	&:hover {
 		svg, path {
 		    transition: fill 0.2s ease;
@@ -91,7 +91,7 @@ p {
 .skills-list {
     border-right:    1px solid #fff;
     padding-right:   40px;
-	
+
 	li {
 	    margin:  12px 0;
 	}
@@ -102,10 +102,10 @@ p {
 .contact-list {
     padding-left:   40px;
     width:  200px;
-	
+
 	li {
 		margin:	8px 0;
-		
+
 		&:first-child {
 			margin-bottom:	15px;
 		}
@@ -116,41 +116,41 @@ p {
     html {
         height: auto;
     }
-    
+
     .wrapper {
         position:   static;
         margin: 100px 30px 30px 30px;
     }
-    
+
     ul {
         display:    block;
     }
-    
+
     .skills-list {
         border: 0;
     }
-    
+
     .contact-list {
         padding-left:   0;
     }
-    
+
     .skills-list li {
         margin: 0;
     }
-    
+
     .list-header, .skills-list .list-header {
         margin-bottom:  10px;
         text-decoration:    underline;
     }
-    
+
 }
 
 @media only screen and (max-width: 400px) {
-    
+
     .wrapper {
         margin: 100px 20px 30px 20px;
     }
-    
+
 }
 
 
@@ -174,10 +174,3 @@ p {
     from, to { border-color: transparent }
     50% { border-color: #666 }
 }
-    
-    
-
-
-
-
-
