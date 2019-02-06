@@ -1,18 +1,31 @@
 html {
-  font-family: "Frank Ruhl Libre", serif;
   color: $grey;
   -webkit-font-smoothing: antialiased;
+  font-family: helvetica, arial, sans-serif;
+  font-size: 100%;
 }
 
 h1 {
-
+  font-family: "Frank Ruhl Libre", serif;
   font-weight: 500;
-  font-size: 3em;
+  // font-size: 1.8em;
+
+  @media only screen and (min-width: 950px) {
+			font-size: 2em;
+		}
 }
 
 p {
   margin:  .5em 0;
   color: $light-grey;
+}
+
+a {
+  color: $grey;
+
+  &:hover {
+    color: $light-grey;
+  }
 }
 
 .homepage-bg {
@@ -24,7 +37,7 @@ p {
   bottom: $border;
   left: $border;
 
-  background: url("/img/P7061633.jpg") center / contain no-repeat;
+  background: url("/img/P7061633.jpg") bottom center / contain no-repeat;
   padding:  0 2em;
 
   h1 {
@@ -41,5 +54,19 @@ p {
       height: 2px;
       background-color: $grey;
     }
+  }
+}
+
+.nav {
+  list-style: none;
+  padding: 0 0 0 .2em;
+
+  li {
+    padding-bottom: .3em;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: .9em;
   }
 }

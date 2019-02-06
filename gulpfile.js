@@ -4,17 +4,17 @@
 */
 
 var gulp = require('gulp'),
-	concat = require('gulp-concat'),
-	uglify = require('gulp-uglify'),
-	rename = require('gulp-rename'),
-	sass = require('gulp-ruby-sass'),
-	minifycss = require('gulp-clean-css'),
-	notify = require('gulp-notify'),
-	autoprefixer = require('gulp-autoprefixer'),
-	watch = require('gulp-watch'),
-	imagemin = require('gulp-imagemin'),
-	cache = require('gulp-cache'),
-	webserver = require('gulp-webserver');
+		concat = require('gulp-concat'),
+		uglify = require('gulp-uglify'),
+		rename = require('gulp-rename'),
+		sass = require('gulp-ruby-sass'),
+		minifycss = require('gulp-clean-css'),
+		notify = require('gulp-notify'),
+		autoprefixer = require('gulp-autoprefixer'),
+		watch = require('gulp-watch'),
+		imagemin = require('gulp-imagemin'),
+		cache = require('gulp-cache'),
+		webserver = require('gulp-webserver');
 
 
 gulp.task('serve', function() {
