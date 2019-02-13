@@ -14,16 +14,14 @@ var gulp = require('gulp'),
 		watch = require('gulp-watch'),
 		imagemin = require('gulp-imagemin'),
 		cache = require('gulp-cache'),
-		webserver = require('gulp-webserver');
+		connect = require('gulp-connect');
 
 
 gulp.task('serve', function() {
-  gulp.src('./')
-    .pipe(webserver({
-      livereload: true,
-      open: true,
-			fallback: './index.html'
-    }));
+	connect.server({
+    root: './',
+    livereload: true
+  });
 });
 
 
