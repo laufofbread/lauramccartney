@@ -27,15 +27,3 @@ a {
     color: $light-grey;
   }
 }
-
-.homepage-bg {
-  $border: 0;
-
-  position: absolute;
-  top: $border;
-  right: $border;
-  bottom: $border;
-  left: $border;
-
-  background: url("/img/P7061633.jpg") bottom center / contain no-repeat;
-}
