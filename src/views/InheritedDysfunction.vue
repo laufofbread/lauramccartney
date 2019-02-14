@@ -1,17 +1,16 @@
 <template>
   <main class="gallery">
-    <img class="image" v-for="(image, i) in images" :src="image" :key="i" @click="index = i">
-    <vue-gallery-slideshow :images="images" :index="index" @close="index = null"></vue-gallery-slideshow>
+    <gallery :images="images"></gallery>
   </main>
 </template>
 
 <script>
-import VueGallerySlideshow from 'vue-gallery-slideshow';
+import gallery from '../components/Gallery.vue';
 
 export default {
   name: 'InheritedDysfunction',
   components: {
-    VueGallerySlideshow
+    gallery
   },
   data:
     function() {
