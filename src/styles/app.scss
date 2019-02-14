@@ -1,0 +1,7 @@
+$grey: #333;
+$light-grey: #aaa;
+
+@mixin size($width, $height) {
+  width:  $width;
+  height: $height;
+}
