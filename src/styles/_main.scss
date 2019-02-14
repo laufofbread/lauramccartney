@@ -5,6 +5,14 @@ html {
   font-size: 100%;
 }
 
+#app {
+  display: flex;
+}
+
+main {
+  flex: 3;
+}
+
 h1 {
   font-family: "Frank Ruhl Libre", serif;
   font-weight: 500;
