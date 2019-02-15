@@ -45,16 +45,14 @@ nav {
   position: relative;
 
   &:before {
-    $dot-size:  .4em;
 
     content: "";
     position: absolute;
-    left: -10px;
-    top: 35%;
+    left: -12px;
+    top: 45%;
     bottom: auto;
 
-    @include size($dot-size, $dot-size);
-    background-color: $light-grey;
-    border-radius: 50%;
+    @include size(7px, 1px);
+    background-color: $grey;
   }
 }
