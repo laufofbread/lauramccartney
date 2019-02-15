@@ -17,6 +17,9 @@
       </ul>
     </nav>
     <router-view/>
+    <a class="insta-icon" href="https://www.instagram.com/laufofbread/">
+      <img src="./img/insta-icon.svg" />
+    </a>
   </div>
 </template>
 

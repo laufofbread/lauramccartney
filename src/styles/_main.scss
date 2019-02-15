@@ -6,11 +6,11 @@ html {
 }
 
 #app {
-  padding: 1em;
+  padding: $padding-small;
 
   @media screen and (min-width: $breakpoint-small) {
     display: flex;
-    padding: 2em;
+    padding: $padding-big;
   }
 }
 
@@ -39,5 +39,23 @@ a {
 
   &:hover {
     color: $light-grey;
+  }
+}
+
+.insta-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  @include size(20px, 20px);
+
+  img {
+    @include size(100%,100%);
+  }
+
+  padding: $padding-small;
+
+  @media screen and (min-width: $breakpoint-small) {
+    padding: $padding-big;
   }
 }
