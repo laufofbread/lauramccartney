@@ -4,6 +4,7 @@ $light-grey: #E0E0E1;
 $breakpoint-small: 1050px;
 $padding-small: 1em;
 $padding-big: 2em;
+$bottom-pad-sm: 3em;
 
 @mixin size($width, $height) {
   width:  $width;

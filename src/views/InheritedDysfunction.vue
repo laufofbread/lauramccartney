@@ -23,14 +23,13 @@ export default {
     function() {
       return  {
         images: [
+          require('../img/cracks/P7061633.jpg'),
           require('../img/cracks/P7061480.jpg'),
           require('../img/cracks/P7061484.jpg'),
-          require('../img/cracks/P7061489.jpg'),
           require('../img/cracks/P7061540.jpg'),
-          require('../img/cracks/P7061633.jpg'),
           require('../img/cracks/P7061664.jpg'),
-          require('../img/cracks/P7061669.jpg'),
-          require('../img/cracks/P7061675.jpg')
+          require('../img/cracks/P7061675.jpg'),
+          require('../img/cracks/P7061669.jpg')
         ],
        index: null
      }
@@ -40,5 +39,5 @@ export default {
 
 
 <style lang="scss">
-
+@import "@/styles/_gallery.scss";
 </style>
