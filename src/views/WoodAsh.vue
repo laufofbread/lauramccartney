@@ -1,16 +1,23 @@
 <template>
-  <main>
-    <gallery :images="images"></gallery>
+  <main class="gallery">
+    <gallery :images="images" :index="index" @close="index = null"></gallery>
+    <div class="thumbnails">
+      <img v-for="(image, i) in images"
+            :src="image"
+            :key="i"
+            @click="index = i"
+            :index="i">
+    </div>
   </main>
 </template>
 
 <script>
-import gallery from '../components/Gallery.vue';
+import VueGallery from 'vue-gallery';
 
 export default {
   name: 'WoodAsh',
   components: {
-    gallery
+    'gallery': VueGallery
   },
   data:
     function() {
@@ -37,5 +44,5 @@ export default {
 
 
 <style lang="scss">
-
+@import "@/styles/_gallery.scss";
 </style>

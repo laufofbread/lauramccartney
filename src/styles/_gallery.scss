@@ -1,0 +1,33 @@
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(14rem,1fr));
+  grid-gap: 1rem;
+
+  img {
+    width: 100%;
+    height: auto;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.gallery {
+  .blueimp-gallery {
+    background-color: $light-grey;
+
+    &>.next, &>.prev, &>.close {
+      background-color: transparent;
+      border: none;
+      color: $grey;
+      font-weight: 200;
+      text-shadow: none;
+      font-family: "Frank Ruhl Libre", serif;
+    }
+
+    &>.close {
+      font-size: 20px;
+    }
+  }
+}
