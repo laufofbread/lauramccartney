@@ -26,7 +26,8 @@ export default {
           require('../img/ash/P7061478.jpg'),
           require('../img/ash/P7061519.jpg'),
           require('../img/ash/P7061657.jpg'),
-          require('../img/ash/P7061754.jpg')
+          require('../img/ash/P7061754.jpg'),
+          require('../img/ash/P7061379.jpg')
         ],
        index: null
      }
