@@ -46,10 +46,27 @@ p {
 
 a {
   color: $grey;
+  text-decoration: none;
+  border-bottom: 1px solid $grey;
 
   &:hover {
     color: $light-grey;
   }
+}
+
+h5 {
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: .5em;
+}
+
+li {
+  padding-bottom: .3em;
 }
 
 .insta-icon {
