@@ -1,15 +1,21 @@
 nav {
   position: relative;
-  padding:  0 2em;
   z-index: 1;
-  height: 100%;
-  flex: 1;
+
+  a {
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: $breakpoint-small) {
+    padding:  0 2em 0 0;
+    width: 250px;
+  }
 }
 
 .home-link {
   position: relative;
   display: inline-block;
-  margin-bottom: 0;
+  margin: 0;
 
   &::after {
     content: '';
@@ -31,7 +37,6 @@ nav {
   }
 
   a {
-    text-decoration: none;
     font-size: .9em;
   }
 }

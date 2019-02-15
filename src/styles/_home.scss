@@ -2,7 +2,7 @@
   $border: 0;
 
   position: absolute;
-  top: $border;
+  top: 100px;
   right: $border;
   bottom: $border;
   left: $border;
@@ -10,4 +10,8 @@
   background: url("../img/P7061633.jpg") bottom center / contain no-repeat;
 
   z-index: 0;
+
+  @media screen and (min-width: $breakpoint-small) {
+    top: $border;
+  }
 }

@@ -1,6 +1,10 @@
 <template>
   <div class="thumbnails">
-    <img class="image" v-for="(image, i) in images" :src="image" :key="i" @click="index = i">
+    <img v-for="(image, i) in images"
+          :src="image"
+          :key="i"
+          @click="index = i"
+          :index="i">
   </div>
 </template>
 

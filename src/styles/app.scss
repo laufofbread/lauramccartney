@@ -1,6 +1,8 @@
 $grey: #333;
 $light-grey: #aaa;
 
+$breakpoint-small: 1050px;
+
 @mixin size($width, $height) {
   width:  $width;
   height: $height;
