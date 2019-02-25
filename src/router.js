@@ -5,7 +5,8 @@ import Home from './views/Home.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // Remove until I stop using github pages
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
