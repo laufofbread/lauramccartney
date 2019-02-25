@@ -14,19 +14,8 @@ nav {
 }
 
 .home-link {
-  position: relative;
   display: inline-block;
   margin: 0;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: .1em;
-    right: .6em;
-    left: .05em;
-    height: 2px;
-    background-color: $grey;
-  }
 }
 
 .nav {
