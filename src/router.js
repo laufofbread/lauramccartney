@@ -20,9 +20,9 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
-      path: '/inherited-dysfunction',
-      name: 'inherited-dysfunction',
-      component: () => import('./views/InheritedDysfunction.vue')
+      path: '/cracked',
+      name: 'cracked',
+      component: () => import('./views/Cracked.vue')
     },
     {
       path: '/wood-ash',

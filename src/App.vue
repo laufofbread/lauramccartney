@@ -6,7 +6,7 @@
       </h1>
       <ul class="nav">
         <li>
-          <router-link to="/inherited-dysfunction/">Inherited dysfunction</router-link>
+          <router-link to="/cracked/">Cracked</router-link>
         </li>
         <li>
           <router-link to="/wood-ash/">Wood ash</router-link>
@@ -17,7 +17,7 @@
       </ul>
     </nav>
     <router-view/>
-    <a class="insta-icon" href="https://www.instagram.com/laufofbread/">
+    <a class="insta-icon" href="https://www.instagram.com/lauramccartneyceramics/">
       <img src="./img/insta-icon.svg" />
     </a>
   </div>

@@ -15,7 +15,7 @@
 import VueGallery from 'vue-gallery';
 
 export default {
-  name: 'WoodAsh',
+  name: 'Cracked',
   components: {
     'gallery': VueGallery
   },
