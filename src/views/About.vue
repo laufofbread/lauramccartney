@@ -11,7 +11,7 @@
         <a href="https://laufofbread.co.uk">A Lauf Adventure</a> - a travel photo journal
       </li>
       <li>
-        <a href="https://github.com/laufofbread">Personal Github</a> - web development projects
+        <a href="https://lauramccartney.github.io/portfolio/">Development portfolio</a> - web development projects
       </li>
     </ul>
     <p>
