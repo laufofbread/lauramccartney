@@ -20,14 +20,9 @@ export default new Router({
       component: () => import('./views/About.vue')
     },
     {
-      path: '/cracked',
-      name: 'cracked',
-      component: () => import('./views/Cracked.vue')
-    },
-    {
-      path: '/wood-ash',
-      name: 'wood-ash',
-      component: () => import('./views/WoodAsh.vue')
+      path: '/gallery',
+      name: 'gallery',
+      component: () => import('./views/Gallery.vue')
     }
   ]
 })

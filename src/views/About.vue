@@ -17,6 +17,10 @@
     <p>
       If you would like to contact me please email hello@lauramccartney.co.uk. I look forward to hearing from you :-)
     </p>
+
+    <a class="insta-icon" href="https://www.instagram.com/lauramccartneyceramics/">
+      <img src="../img/insta-icon.svg" />
+    </a>
   </main>
 </template>
 
@@ -27,6 +31,15 @@
 
     @media screen and (min-width: $breakpoint-small) {
       margin-bottom: $padding-big;
+    }
+  }
+
+  .insta-icon {
+    border-bottom: none;
+    z-index: 3;
+
+    img {
+      @include size(1.3em, auto);
     }
   }
 </style>

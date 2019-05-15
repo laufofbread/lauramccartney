@@ -1,44 +1,130 @@
-nav {
-  position: relative;
-  z-index: 1;
+nav, footer {
+  text-align: center;
+
+  @media screen and (min-width: $breakpoint-small) {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+  }
 
   a {
     text-decoration: none;
     border-bottom: none;
   }
+}
+
+nav {
+  margin-bottom: 2em;
 
   @media screen and (min-width: $breakpoint-small) {
-    padding:  0 2em 0 0;
-    width: 285px;
+    margin-bottom: 4em;
   }
 }
 
-.home-link {
-  display: inline-block;
-  margin: 0;
-}
-
 .nav {
-  list-style: none;
-  padding: 0 0 0 .2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
-  a {
-    font-size: .9em;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0 0 0;
+
+  font-size: 1.1em;
+
+  @media screen and (min-width: $breakpoint-small) {
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li {
+    margin: 0 1em;
+    padding: 0;
+    letter-spacing: 0.05em;
+
+    @media screen and (min-width: $breakpoint-small) {
+      margin-right: 0;
+    }
   }
 }
 
 .router-link-active {
+  border-bottom: 1px solid $black;
+
+}
+
+.home-link {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  letter-spacing: .2em;
+  margin: 0;
+}
+
+.signup {
+
+  label {
+    text-align: left;
+  }
+
+  input {
+    font-family: $primary-font;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    outline: 0;
+    appearance: none;
+  }
+
+  input[type="email"] {
+    border-bottom: 1px solid $black;
+  }
+
+  .input-wrapper {
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.home-link, .signup {
+  margin-bottom: 1em;
+
+  @media screen and (min-width: $breakpoint-small) {
+      margin: 0 auto 0 0;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: $padding-small;
+  left: $padding-small;
+  right: $padding-small;
+
+  @media screen and (min-width: $breakpoint-small) {
+    bottom: $padding-big;
+    left: $padding-big;
+    right: $padding-big;
+
+    align-items: flex-end;
+  }
+}
+
+.input-wrapper {
   position: relative;
 
-  &:before {
+  input[type="email"] {
+    padding: .3em 70px .3em 0;
+    width: 100%;
+  }
 
-    content: "";
+  input[type="submit"] {
     position: absolute;
-    left: -10px;
-    top: 45%;
-    bottom: auto;
-
-    @include size(7px, 1px);
-    background-color: $grey;
+    bottom: .5em;
+    right: 0;
+    padding: 0;
+    font-size: .9em;
+    font-weight: normal;
+    cursor: pointer;
   }
 }

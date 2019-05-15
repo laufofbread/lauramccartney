@@ -6,10 +6,7 @@
       </h1>
       <ul class="nav">
         <li>
-          <router-link to="/cracked/">Cracked</router-link>
-        </li>
-        <li>
-          <router-link to="/wood-ash/">Wood ash</router-link>
+          <router-link to="/gallery/">Gallery</router-link>
         </li>
         <li>
           <router-link to="/about/">About</router-link>
@@ -17,13 +14,20 @@
       </ul>
     </nav>
     <router-view/>
-    <a class="insta-icon" href="https://www.instagram.com/lauramccartneyceramics/">
-      <img src="./img/insta-icon.svg" />
-    </a>
+    <footer>
+      <form class="signup">
+        <label>Sign up to the newsletter:</label>
+        <div class="input-wrapper">
+          <input type="email" />
+          <input type="submit" value="subscribe" />
+        </div>
+      </form>
+
+      <a href="https://www.instagram.com/lauramccartneyceramics/">Instagram</a>
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
-  @import url('https://fonts.googleapis.com/css?family=Frank+Ruhl+Libre:500');
   @import "@/styles/_menu.scss";
 </style>

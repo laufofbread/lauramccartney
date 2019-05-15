@@ -15,7 +15,7 @@
 import VueGallery from 'vue-gallery';
 
 export default {
-  name: 'WoodAsh',
+  name: 'Gallery',
   components: {
     'gallery': VueGallery
   },
@@ -23,6 +23,13 @@ export default {
     function() {
       return  {
         images: [
+          require('../img/cracks/P7061633.jpg'),
+          require('../img/cracks/P7061480.jpg'),
+          require('../img/cracks/P7061484.jpg'),
+          require('../img/cracks/P7061540.jpg'),
+          require('../img/cracks/P7061664.jpg'),
+          require('../img/cracks/P7061675.jpg'),
+          require('../img/cracks/P7061669.jpg'),
           require('../img/ash/P7061386.jpg'),
           require('../img/ash/P7061401.jpg'),
           require('../img/ash/P7061416.jpg'),

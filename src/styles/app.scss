@@ -1,13 +1,26 @@
+$black: #212022;
 $grey: #67676A;
 $light-grey: #9a9a9e;
 $lighter-grey: #E0E0E1;
 
-$breakpoint-small: 1050px;
-$padding-small: 1em;
+$breakpoint-small: 750px;
+
+$padding-small: 1.5em;
 $padding-big: 2em;
-$bottom-pad-sm: 3em;
+$padding-footer: 9.5em;
+
+$primary-font: "NexaLight", sans-serif;
 
 @mixin size($width, $height) {
   width:  $width;
   height: $height;
+}
+
+@font-face {
+  font-family: "NexaLight";
+  src: url('~@/fonts/Nexa/NexaDemo-Light.eot');
+  src: url('~@/fonts/Nexa/NexaDemo-Light.eot?#iefix') format('embedded-opentype'),
+    url('~@/fonts/Nexa/NexaDemo-Light.woff2') format('woff2'),
+    url('~@/fonts/Nexa/NexaDemo-Light.woff') format('woff'),
+    url('~@/fonts/Nexa/NexaDemo-Light.ttf') format('truetype');
 }

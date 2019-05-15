@@ -1,17 +1,19 @@
 .homepage-bg {
-  $border: 0;
-
-  position: absolute;
-  top: 100px;
-  right: $border;
-  bottom: $border;
-  left: $border;
-
   background: url("../img/P7061633.jpg") bottom center / contain no-repeat;
-
-  z-index: 0;
+  height: calc(100vh - 9.5em - 120px);
 
   @media screen and (min-width: $breakpoint-small) {
+    $border: 0;
+
+    position: absolute;
     top: $border;
+    right: $border;
+    bottom: $border;
+    left: $border;
+
+    width: 100%;
+    height: 100vh;
+
+    z-index: -1;
   }
 }
