@@ -13,7 +13,9 @@
         </li>
       </ul>
     </nav>
+    
     <router-view/>
+
     <footer>
       <form class="signup">
         <label>Sign up to the newsletter:</label>
