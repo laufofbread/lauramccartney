@@ -13,7 +13,7 @@
         </li>
       </ul>
     </nav>
-    
+
     <router-view/>
 
     <footer>
@@ -29,6 +29,7 @@
     </footer>
   </div>
 </template>
+
 
 <style lang="scss">
   @import "@/styles/_menu.scss";

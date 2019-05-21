@@ -5,14 +5,13 @@
     "smSrc": "",
     "thumbnail": ""
   },
-  "aboutPage": [
-    {
-      "file": "P7061833",
-      "src": "P7061833.jpg",
-      "smSrc": "",
-      "thumbnail": ""
-    },
-  ],
+  "aboutPage":
+  {
+    "file": "P7061833",
+    "src": "P7061833.jpg",
+    "smSrc": "",
+    "thumbnail": ""
+  },
   "all": [
     {
       "file": "cracks/P7061633",
@@ -186,5 +185,4 @@
       "materials": "Mashiko earthenware, natural ash glaze"
     }
   ]
-  }
 }
