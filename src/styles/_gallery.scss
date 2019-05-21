@@ -6,6 +6,7 @@
   img {
     width: 100%;
     height: auto;
+    background-color: salmon;
 
     &:hover {
       cursor: pointer;
@@ -14,23 +15,17 @@
 }
 
 .gallery {
-  .blueimp-gallery {
-    background-color: $lighter-grey;
+  position: relative;
 
-    &>.next, &>.prev, &>.close {
-      background-color: transparent;
-      border: none;
-      color: $grey;
-      font-weight: 200;
-      text-shadow: none;
-    }
+  .btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+}
 
-    &>.close {
-      font-size: 20px;
-    }
-
-    &>.next, &>.prev {
-      font-family: "Frank Ruhl Libre", serif;
-    }
+.gallery-item {
+  img {
+    width: 100%;
   }
 }

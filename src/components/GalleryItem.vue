@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <img :src="getCurrentItem" />
-  </div>
+  <section class="gallery-item">
+    <slot></slot>
+    <img :src="getCurrentImage" />
+{{getCurrentItem}}
+    <h2>{{ getCurrentItem.location }}</h2>
+    <p>
+      {{ getCurrentItem.materials }}
+    </p>
+  </section>
 
 </template>
 
@@ -11,7 +17,10 @@ export default {
   props: ["items", "index"],
   computed: {
     getCurrentItem() {
-      return require('../img/'+ this.items[this.index].src +'');
+      return this.items[this.index];
+    },
+    getCurrentImage() {
+      return require('../img/'+ this.getCurrentItem.src +'');
     }
   }
 };
@@ -19,5 +28,4 @@ export default {
 </script>
 
 <style lang="scss">
-
 </style>
