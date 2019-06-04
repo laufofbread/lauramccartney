@@ -5,10 +5,22 @@ module.exports = {
     'style-resources-loader': {
       preProcessor: 'scss',
       patterns: [
-         path.resolve(__dirname, './src/styles/app.scss'),
-         path.resolve(__dirname, './src/styles/_normalize.scss'),
-         path.resolve(__dirname, './src/styles/_main.scss')
+        path.resolve(__dirname, './src/styles/app.scss'),
+        path.resolve(__dirname, './src/styles/_normalize.scss'),
+        path.resolve(__dirname, './src/styles/_main.scss'),
+        path.resolve(__dirname, './src/styles/_animations.scss')
       ]
     }
+  },
+  chainWebpack: config => {
+    config.module
+      .rule('responsize-images')
+      .test(/\.(jpe?g|png)$/i)
+      .use('responsive-loader')
+          .loader('responsive-loader')
+          .options({
+            adapter: require('responsive-loader/sharp')
+          })
+          .end()
   }
 }

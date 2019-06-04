@@ -1,6 +1,6 @@
 <template>
   <main>
-    <img src="../img/P7061833.jpg" class="hero-image" />
+    <!-- <img src="../img/P7061833.jpg" class="hero-image" /> -->
     <p>
       My work is a collaboration between me and the materials. <br />
       This means local clay, natural ash glazes and embracing the uncertainty of the kiln.
@@ -17,10 +17,6 @@
     <p>
       If you would like to contact me please email hello@lauramccartney.co.uk. I look forward to hearing from you :-)
     </p>
-
-    <a class="insta-icon" href="https://www.instagram.com/lauramccartneyceramics/">
-      <img src="../img/insta-icon.svg" />
-    </a>
   </main>
 </template>
 
