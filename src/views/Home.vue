@@ -1,18 +1,14 @@
 <template>
-  <prog-image class="homepage-bg" :images="images" bg-image="true"></prog-image>
+  <prog-image class="homepage-bg" :images="images" bg-image></prog-image>
 </template>
 
 <script>
-import ProgImage from "../components/ProgImage.vue";
 
 export default {
   name: 'Home',
-  components: {
-    'prog-image': ProgImage
-  },
   data() {
     return {
-      images: require('@/img/P7061633.jpg'),
+      images: require('@/img/P7061633.jpg?size=600'),
     }
   }
 }

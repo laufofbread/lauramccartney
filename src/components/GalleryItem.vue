@@ -1,7 +1,7 @@
 <template>
   <section class="gallery-item">
     <slot></slot>
-    <img :src="getCurrentImage" />
+    <prog-image :images="getCurrentImage"></prog-image>
 {{getCurrentItem}}
     <h2>{{ getCurrentItem.location }}</h2>
     <p>

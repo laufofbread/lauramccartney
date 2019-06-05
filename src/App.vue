@@ -1,36 +1,30 @@
 <template>
   <div id="app">
-    <nav>
-      <transition name="slide-top-left" appear>
-        <h1 class="home-link">
-          <a href="/">Laura McCartney</a>
-        </h1>
-      </transition>
+    <transition name="slide-top" appear>
+      <nav>
+          <h1 class="home-link">
+            <a href="/">Laura McCartney</a>
+          </h1>
 
-      <transition name="slide-top-right" appear>
-        <ul class="nav">
-          <li>
-            <router-link to="/gallery/">Gallery</router-link>
-          </li>
-          <li>
-            <router-link to="/about/">About</router-link>
-          </li>
-        </ul>
-      </transition>
-    </nav>
-
-    <transition name="fade" mode="out-in">
-
-      <router-view/>
-
+          <ul class="nav">
+            <li>
+              <router-link to="/gallery/">Gallery</router-link>
+            </li>
+            <li>
+              <router-link to="/about/">About</router-link>
+            </li>
+          </ul>
+      </nav>
     </transition>
 
-    <footer>
-      <transition name="slide-bottom-left" appear>
-        <a class="social-link" href="https://www.instagram.com/lauramccartneyceramics/">Instagram</a>
-      </transition>
+    <transition name="fade" mode="out-in">
+      <router-view/>
+    </transition>
 
-      <transition name="slide-bottom-right" appear>
+  <transition name="slide-bottom" appear>
+    <footer>
+        <a class="social-link" href="https://www.instagram.com/lauramccartneyceramics/">Instagram</a>
+
       <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup" class="signup">
           <form action="https://lauramccartney.us20.list-manage.com/subscribe/post?u=808727f788695c507a499d0a7&amp;id=c3e23677a0"
@@ -60,9 +54,10 @@
             </form>
           </div>
         <!--End mc_embed_signup-->
-      </transition>
 
     </footer>
+  </transition>
+
   </div>
 </template>
 

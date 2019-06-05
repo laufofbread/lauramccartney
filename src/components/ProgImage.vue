@@ -1,9 +1,12 @@
 <template>
-  <div :class="{ 'blur' : isBlurred, 'unblur' : !isBlurred, 'bg-image' : bgImage }"
-        :style="[ bgImage ? { backgroundImage: 'url(' + imageSrc + ')' } : '' ]">
+  <div class="placeholder-image"
+       :class="{ 'blur' : isBlurred, 'unblur' : !isBlurred, 'bg-image' : bgImage }"
+       :style="[ bgImage ? { backgroundImage: 'url(' + imageSrc + ')' } : '' ]">
 
     <img v-if="!bgImage"
-          :src="imageSrc" />
+          :src="imageSrc"
+          :srcSet="images.srcSet"
+          sizes="100vw" />
   </div>
 </template>
 
@@ -21,9 +24,11 @@ export default {
     }
   },
   methods: {
-
-    loadFullImage: function() {
+    loadFullImage() {
       this.imageSrc = this.images.src;
+      this.unBlur();
+    },
+    unBlur() {
       this.isBlurred = false;
     }
   },
@@ -31,21 +36,22 @@ export default {
     let img;
         img = new Image();
         img.onload = this.loadFullImage();
-        img.src = this.imageSrc
+        img.src = this.imageSrc;
   }
 };
 
 </script>
 
 <style lang="scss">
+  $blur: 5px;
+  @keyframes reveal { from { filter:blur($blur); } to { filter:blur(0px); }  }
 
-.blur {
-  filter: blur(8px);
-}
+  .blur {
+    filter: blur($blur);
+  }
 
-.unblur {
-  animation: 0.5s linear forwards reveal;
-}
+  .unblur {
+    animation: 0.5s linear forwards reveal;
+  }
 
-@keyframes reveal { from { filter:blur(8px); } to { filter:blur(0px); }  }
 </style>

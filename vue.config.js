@@ -22,6 +22,7 @@ module.exports = {
           .loader('responsive-loader')
           .options({
             adapter: require('responsive-loader/sharp'),
+            sizes: [300, 600, 1200, 2000],
             placeholder: true,
             placeholderSize: 50
           })
