@@ -21,3 +21,11 @@
   transform: translateX(0) translateY(0);
   transition: transform .5s ease;
 }
+
+
+.fade-enter-active, .fade-leave-active, .fade-in-enter-active {
+  transition: opacity .3s;
+}
+.fade-enter, .fade-leave-to, .fade-in-enter {
+  opacity: 0;
+}

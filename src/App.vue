@@ -19,7 +19,11 @@
       </transition>
     </nav>
 
-    <router-view/>
+    <transition name="fade" mode="out-in">
+
+      <router-view/>
+
+    </transition>
 
     <footer>
       <transition name="slide-bottom-left" appear>

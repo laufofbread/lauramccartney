@@ -1,23 +1,19 @@
 <template>
-  <main class="homepage-bg" v-bind:style="{ backgroundImage: 'url(' + image + ')' }"></main>
+  <prog-image class="homepage-bg" :images="images" bg-image="true"></prog-image>
 </template>
 
 <script>
+import ProgImage from "../components/ProgImage.vue";
+
 export default {
   name: 'Home',
+  components: {
+    'prog-image': ProgImage
+  },
   data() {
     return {
-      image: require('@/img/P7061633.jpg')
+      images: require('@/img/P7061633.jpg'),
     }
-  },
-  methods: {
-    onLoad() {
-      console.log("HERE");
-      console.log(this.image);
-    }
-  },
-  mounted() {
-    this.onLoad();
   }
 }
 </script>

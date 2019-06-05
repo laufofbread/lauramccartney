@@ -53,10 +53,4 @@
 <style lang="scss">
   @import "@/styles/_gallery.scss";
 
-.fade-enter-active, .fade-leave-active, .fade-in-enter-active {
-  transition: opacity .3s;
-}
-.fade-enter, .fade-leave-to, .fade-in-enter {
-  opacity: 0;
-}
 </style>
