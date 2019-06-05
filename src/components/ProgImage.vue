@@ -28,7 +28,6 @@ export default {
     }
   },
   mounted() {
-    console.log(this.bgImage);
     let img;
         img = new Image();
         img.onload = this.loadFullImage();
