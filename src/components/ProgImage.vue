@@ -1,19 +1,19 @@
 <template>
-  <div class="bg-image"
-        :class="{ blur : isBlurred, unblur : !isBlurred }"
-        :style="{ backgroundImage: 'url(' + imageSrc + ')' }"
-        v-if="bgImage">
-  </div>
+  <div :class="{ 'blur' : isBlurred, 'unblur' : !isBlurred, 'bg-image' : bgImage }"
+        :style="[ bgImage ? { backgroundImage: 'url(' + imageSrc + ')' } : '' ]">
 
+    <img v-if="!bgImage"
+          :src="imageSrc" />
+  </div>
 </template>
 
 <script>
 
 export default {
-  props: [
-    "images",
-    "bgImage"
-  ],
+  props: {
+    images: Object,
+    bgImage: Boolean
+  },
   data () {
     return {
       imageSrc: this.images.placeholder,
@@ -21,13 +21,14 @@ export default {
     }
   },
   methods: {
+
     loadFullImage: function() {
       this.imageSrc = this.images.src;
-
-        this.isBlurred = false;
+      this.isBlurred = false;
     }
   },
   mounted() {
+    console.log(this.bgImage);
     let img;
         img = new Image();
         img.onload = this.loadFullImage();

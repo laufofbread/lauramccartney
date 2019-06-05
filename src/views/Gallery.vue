@@ -12,10 +12,10 @@
     <transition name="fade">
 
       <div class="thumbnails" v-if="!open">
-        <img v-for="(image, i) in images"
-              :src="require('../img/'+ image.src +'')"
+        <prog-image v-for="(image, i) in images"
+              :images="require('../img/'+ image.src +'')"
               :key="i"
-              @click="toggleItem(i)">
+              @click="toggleItem(i)"></prog-image>
       </div>
 
     </transition>
@@ -25,13 +25,15 @@
 
 <script>
   import GalleryItem from '../components/GalleryItem.vue';
+  import ProgImage from "../components/ProgImage.vue";
 
   const imageList = require('../img/imageList.json');
 
   export default {
     name: 'Gallery',
     components: {
-      'gallery-item': GalleryItem
+      'gallery-item': GalleryItem,
+      'prog-image': ProgImage
     },
     data () {
       return {
