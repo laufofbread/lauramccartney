@@ -13,13 +13,17 @@ module.exports = {
     }
   },
   chainWebpack: config => {
-    config.module
-      .rule('responsize-images')
+    const imagesRule = config.module.rule('images');
+    imagesRule.uses.clear();
+
+    imagesRule
       .test(/\.(jpe?g|png)$/i)
       .use('responsive-loader')
           .loader('responsive-loader')
           .options({
-            adapter: require('responsive-loader/sharp')
+            adapter: require('responsive-loader/sharp'),
+            placeholder: true,
+            placeholderSize: 50
           })
           .end()
   }
