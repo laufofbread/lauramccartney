@@ -23,6 +23,12 @@ export default new Router({
       path: '/gallery',
       name: 'gallery',
       component: () => import('./views/Gallery.vue')
+    },
+    {
+      path: '/gallery/item/:id',
+      name: 'item',
+      component: () => import('./views/GalleryItem.vue'),
+      props: true
     }
   ]
 })
