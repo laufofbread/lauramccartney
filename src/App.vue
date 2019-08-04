@@ -23,7 +23,7 @@
 
   <transition name="slide-bottom" appear>
     <footer>
-        <a class="social-link" href="https://www.instagram.com/lauramccartneyceramics/">Instagram</a>
+        <a class="social-link" target="_blank" href="https://www.instagram.com/lauramccartneyceramics/">Instagram</a>
 
       <!-- Begin Mailchimp Signup Form -->
         <div id="mc_embed_signup" class="signup">
@@ -62,5 +62,8 @@
 </template>
 
 <style lang="scss">
+  @import "@/styles/_normalize.scss";
+  @import "@/styles/_main.scss";
+  @import "@/styles/_animations.scss";
   @import "@/styles/_menu.scss";
 </style>

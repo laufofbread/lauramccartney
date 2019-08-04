@@ -4,19 +4,20 @@
     <prog-image :images="getCurrentImage"></prog-image>
 
     <div class="gallery-nav">
-      <router-link class="prev-btn btn"
+      <router-link class="prev-btn"
                    :to="'/gallery/item/'+ getPrev"> &#60; </router-link>
 
         <aside class="gallery-info">
 
-          <p>{{ getCurrentItem.location }}</p>
-          <p>
+          <p class="primary-info">
             {{ getCurrentItem.materials }}
           </p>
+          <p v-if="getCurrentItem.height && getCurrentItem.width" class="secondary-info">H {{ getCurrentItem.height }}, W {{ getCurrentItem.width }}</p>
+          <p class="secondary-info">{{ getCurrentItem.location }}</p>
 
         </aside>
 
-      <router-link class="next-btn btn"
+      <router-link class="next-btn"
                    :to="'/gallery/item/'+ getNext"> &#62; </router-link>
     </div>
 
@@ -98,6 +99,15 @@ export default {
 
 .next-btn {
   margin-left: 1rem;
+}
+
+.primary-info {
+  font-size: 1.1rem;
+}
+
+.secondary-info {
+  font-size: .9rem;
+  margin: 0;
 }
 
 </style>

@@ -6,7 +6,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay"
+    "materials": "Local wild clay",
+    "height": "32cm",
+    "width": "11cm"
   },
   {
     "file": "P7061480",
@@ -15,7 +17,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "16cm",
+    "width": "9cm"
   },
   {
     "file": "P7061484",
@@ -24,7 +28,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko earthenware, matt white glaze"
+    "materials": "Earthenware, matt white glaze",
+    "height": "6cm",
+    "width": "9cm"
   },
   {
     "file": "P7061540",
@@ -33,7 +39,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "6cm",
+    "width": "10cm"
   },
   {
     "file": "P7061664",
@@ -42,7 +50,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze, matt white glaze"
+    "materials": "Local wild clay, natural ash glaze, matt white glaze",
+    "height": "17cm",
+    "width": "18cm"
   },
   {
     "file": "P7061675",
@@ -51,7 +61,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "29cm",
+    "width": "17cm"
   },
   {
     "file": "P7061669",
@@ -60,7 +72,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze, matt white glaze"
+    "materials": "Local wild clay, natural ash glaze, matt white glaze",
+    "height": "7cm",
+    "width": "16cm"
   },
   {
     "file": "P7061386",
@@ -69,7 +83,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "16cm",
+    "width": "14cm"
   },
   {
     "file": "P7061401",
@@ -78,7 +94,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko earthenware, natural ash glaze"
+    "materials": "Earthenware, natural ash glaze",
+    "height": "8cm",
+    "width": "9cm"
   },
   {
     "file": "P7061416",
@@ -87,7 +105,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "5cm",
+    "width": "7cm"
   },
   {
     "file": "P7061421",
@@ -96,7 +116,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze, matt white glaze"
+    "materials": "Local wild clay, natural ash glaze, matt white glaze",
+    "height": "18cm",
+    "width": "7cm"
   },
   {
     "file": "P7061446",
@@ -105,7 +127,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze, transparent glaze"
+    "materials": "Local wild clay, natural ash glaze, transparent glaze",
+    "height": "5cm",
+    "width": "8cm"
   },
   {
     "file": "P7061450",
@@ -114,7 +138,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko stoneware, natural ash glaze, transparent glaze"
+    "materials": "Stoneware, natural ash glaze, transparent glaze",
+    "height": "8cm",
+    "width": "7cm"
   },
   {
     "file": "P7061471",
@@ -123,7 +149,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze, manganese oxide"
+    "materials": "Local wild clay, natural ash glaze, manganese oxide",
+    "height": "6cm",
+    "width": "9cm"
   },
   {
     "file": "P7061478",
@@ -132,7 +160,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "9cm",
+    "width": "16cm"
   },
   {
     "file": "P7061519",
@@ -141,7 +171,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "5cm",
+    "width": "9cm"
   },
   {
     "file": "P7061657",
@@ -150,7 +182,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko wild clay, natural ash glaze"
+    "materials": "Local wild clay, natural ash glaze",
+    "height": "10cm",
+    "width": "28cm"
   },
   {
     "file": "P7061754",
@@ -159,7 +193,9 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko earthenware, white slip, natural ash glaze"
+    "materials": "Earthenware, white slip, natural ash glaze",
+    "height": "24cm",
+    "width": "16cm"
   },
   {
     "file": "P7061379",
@@ -168,6 +204,8 @@
     "thumbnail": "",
     "name": "",
     "location": "Mashiko, Japan",
-    "materials": "Mashiko earthenware, natural ash glaze"
+    "materials": "Earthenware, natural ash glaze",
+    "height": "5cm",
+    "width": "30cm"
   }
 ]
