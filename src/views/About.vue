@@ -1,6 +1,5 @@
 <template>
   <main>
-    <!-- <img src="../img/P7061833.jpg" class="hero-image" /> -->
     <p>
       My work is a collaboration between me and the materials. <br />
       This means local clay, natural ash glazes and embracing the uncertainty of the kiln.

@@ -2,7 +2,7 @@
   <main class="gallery">
 
     <transition name="fade">
-      
+
       <section class="thumbnails">
         <div class="thumbnail"
            v-for="(image, i) in images"
