@@ -6,21 +6,6 @@
   img {
     width: 100%;
     height: auto;
-    background-color: salmon;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-}
-
-.gallery {
-  position: relative;
-
-  .close-btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 1;
+    background-color: #d3d3d3;
   }
 }

@@ -27,7 +27,7 @@
 
 <script>
 
-const imageList = require('../img/imageList.json');
+const imageList = require('../json/galleryList.json');
 
 export default {
   props: ['id'],

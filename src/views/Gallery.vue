@@ -18,7 +18,7 @@
 </template>
 
 <script>
-  const imageList = require('../img/imageList.json');
+  const imageList = require('../json/galleryList.json');
 
   export default {
     name: 'Gallery',
@@ -33,6 +33,9 @@
 
 
 <style lang="scss">
-  @import "@/styles/_gallery.scss";
-
+  .thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(13rem,2fr));
+    grid-gap: 2rem;
+  }
 </style>

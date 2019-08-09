@@ -29,6 +29,18 @@ export default new Router({
       name: 'item',
       component: () => import('./views/GalleryItem.vue'),
       props: true
+    },
+    {
+      path: '/shop',
+      name: 'shop',
+      component: () => import('./views/Shop.vue'),
+      props: true
+    },
+    {
+      path: '/shop/item/:id',
+      name: 'product',
+      component: () => import('./views/Product.vue'),
+      props: true
     }
   ]
 })

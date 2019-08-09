@@ -8,7 +8,7 @@ export default {
   name: 'Home',
   data() {
     return {
-      images: require('@/img/P7061633.jpg?size=600'),
+      images: require('@/img/homepagebg.jpg?size=600'),
     }
   }
 }
