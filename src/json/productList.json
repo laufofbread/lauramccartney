@@ -3,7 +3,7 @@
     "name": "Organic 1",
     "price": "150.00",
     "weight": "",
-    "description": "Stoneware, porcelain slip",
+    "description": "Stoneware vase",
     "images": [
       "P8080296.jpg",
       "P8080297.jpg",
@@ -16,11 +16,96 @@
     "name": "Organic 2",
     "price": "150.00",
     "weight": "",
-    "description": "Stoneware, porcelain slip",
+    "description": "Stoneware vase",
     "images": [
       "P8080304.jpg",
       "P8080307.jpg",
       "P8080308.jpg"
+    ]
+  },
+  {
+    "name": "Organic 3",
+    "price": "90.00",
+    "weight": "",
+    "description": "Stoneware vase",
+    "images": [
+      "P8080311.jpg",
+      "P8080313.jpg"
+    ]
+  },
+  {
+    "name": "Organic bowl",
+    "price": "50.00",
+    "weight": "",
+    "description": "Stoneware bowl",
+    "images": [
+      "P8080314.jpg",
+      "P8080318.jpg"
+    ]
+  },
+  {
+    "name": "Totem",
+    "price": "110.00",
+    "weight": "",
+    "description": "Stoneware vase",
+    "images": [
+      "P8080321.jpg",
+      "P8080323.jpg",
+      "P8080325.jpg",
+      "P8080328.jpg"
+    ]
+  },
+  {
+    "name": "Lumpy 1",
+    "price": "170.00",
+    "weight": "",
+    "description": "Stoneware vase",
+    "images": [
+      "P8080353.jpg",
+      "P8080354.jpg",
+      "P8080356.jpg",
+      "P8080357.jpg",
+      "P8080358.jpg",
+      "P8080361.jpg",
+      "P8080368.jpg"
+    ]
+  },
+  {
+    "name": "Lumpy 2",
+    "price": "90.00",
+    "weight": "",
+    "description": "Stoneware vase",
+    "images": [
+      "P8080370.jpg",
+      "P8080372.jpg",
+      "P8080374.jpg",
+      "P8080378.jpg"
+    ]
+  },
+  {
+    "name": "Lumpy 3",
+    "price": "90.00",
+    "weight": "",
+    "description": "Stoneware vase",
+    "images": [
+      "P8080381.jpg",
+      "P8080382.jpg",
+      "P8080384.jpg",
+      "P8080386.jpg",
+      "P8080387.jpg"
+    ]
+  },
+  {
+    "name": "Bottle",
+    "price": "120.00",
+    "weight": "",
+    "description": "Black clay bottle",
+    "images": [
+      "P8080396.jpg",
+      "P8080397.jpg",
+      "P8080400.jpg",
+      "P8080401.jpg",
+      "P8080402.jpg"
     ]
   }
 ]

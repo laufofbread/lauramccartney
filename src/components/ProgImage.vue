@@ -54,4 +54,10 @@ export default {
     animation: 0.5s linear forwards reveal;
   }
 
+  .placeholder-image {
+    img {
+      display: block;
+    }
+  }
+
 </style>

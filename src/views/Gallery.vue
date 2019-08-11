@@ -36,6 +36,6 @@
   .thumbnails {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(13rem,2fr));
-    grid-gap: 2rem;
+    grid-gap: $padding-big;
   }
 </style>
