@@ -6,7 +6,8 @@
     <img v-if="!bgImage"
           :src="imageSrc"
           :srcSet="images.srcSet"
-          sizes="100vw" />
+          sizes="100vw"
+          :alt="alt" />
   </div>
 </template>
 
@@ -15,7 +16,8 @@
 export default {
   props: {
     images: Object,
-    bgImage: Boolean
+    bgImage: Boolean,
+    alt: String
   },
   data () {
     return {

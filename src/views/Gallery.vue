@@ -1,18 +1,16 @@
 <template>
   <main class="gallery">
 
-    <transition name="fade">
-
       <section class="thumbnails">
         <div class="thumbnail"
            v-for="(image, i) in images"
            :key="i">
            <router-link :to="'/gallery/item/'+ i">
-             <prog-image :images="require('../img/'+ image.src +'?size=320')"></prog-image>
+             <prog-image :images="require('../img/'+ image.src +'?size=320')"
+                          :alt="image.alt"></prog-image>
           </router-link>
         </div>
       </section>
-    </transition>
 
   </main>
 </template>

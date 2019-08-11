@@ -1,21 +1,19 @@
 <template>
   <main class="product-item">
 
-    <transition name="fade">
 
       <section class="product-gallery">
-        <prog-image class="gallery-active" :images="getActiveImage"></prog-image>
+        <prog-image class="gallery-active" :images="getActiveImage" :alt="getCurrentProduct.description"></prog-image>
 
         <figure class="gallery-thumbnail"
                 :class="[activeThumbnail == i ? 'active' : '']"
                 v-for="(image, i) in getCurrentProduct.images"
                 :key="i"
                 @click="changeActiveImage(i)">
-          <prog-image :images="require('../img/'+ image +'?size=200')"></prog-image>
+          <prog-image :images="require('../img/'+ image +'?size=200')" :alt="getCurrentProduct.description"></prog-image>
         </figure>
 
       </section>
-    </transition>
 
   </main>
 </template>
@@ -65,7 +63,7 @@ $gap : .2rem;
 
 .product-gallery {
   width: 100%;
-  max-width: 900px;
+  max-width: 800px;
 
   display: flex;
   flex-direction: row;

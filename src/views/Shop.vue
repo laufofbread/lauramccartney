@@ -1,24 +1,21 @@
 <template>
   <main class="shop">
 
-    <transition name="fade">
-
       <section class="product-cards">
         <div class="product-card"
            v-for="(product, i) in products"
            :key="i">
            <router-link :to="'/shop/item/'+ i">
-             <prog-image :images="require('../img/'+ product.images[0] +'?size=700')"></prog-image>
+             <prog-image :images="require('../img/'+ product.images[0] +'?size=700')" :alt="product.description"></prog-image>
           </router-link>
           <h2 class="product-card-title">
-            <router-link :to="'/product/item/'+ i">
+            <router-link :to="'/shop/item/'+ i">
               {{ product.name }}
             </router-link>
           </h2>
           <p class="price">£{{ product.price }}</p>
         </div>
       </section>
-    </transition>
 
   </main>
 </template>

@@ -1,7 +1,7 @@
 <template>
 
   <section class="gallery-item">
-    <prog-image :images="getCurrentImage"></prog-image>
+    <prog-image :images="getCurrentImage" :alt="getCurrentItem.alt"></prog-image>
 
     <div class="gallery-nav">
       <router-link class="prev-btn"
