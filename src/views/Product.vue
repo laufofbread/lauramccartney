@@ -1,5 +1,21 @@
 <template>
   <main class="product-item">
+    <section>
+      <h1>{{getCurrentProduct.name}}</h1>
+      <p v-if="getCurrentProduct.description">{{getCurrentProduct.description}}</p>
+      <p v-if="getCurrentProduct.price" class="secondary-info">£{{getCurrentProduct.price}}</p>
+      <p v-if="getCurrentProduct.height && getCurrentProduct.width" class="secondary-info">H {{ getCurrentProduct.height }}, W {{ getCurrentProduct.width }}</p>
+
+      <button class="snipcart-add-item"
+              :data-item-id="id"
+              :data-item-name="getCurrentProduct.name"
+              :data-item-price="getCurrentProduct.price"
+              :data-item-weight="getCurrentProduct.weight"
+              data-item-url="/"
+              :data-item-description="getCurrentProduct.description">
+        Buy
+</button>
+    </section>
 
 
       <section class="product-gallery">
@@ -57,13 +73,14 @@ $gap : .2rem;
 
   @media screen and (min-width: $breakpoint-med) {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 
 .product-gallery {
   width: 100%;
   max-width: 800px;
+  margin-left: auto;
 
   display: flex;
   flex-direction: row;
