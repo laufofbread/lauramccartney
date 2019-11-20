@@ -72,11 +72,20 @@ img {
 }
 
 .btn {
-  background: transparent;
+  background: $black;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: .7rem 1rem .5rem;
+  font-weight: 700;
   border: none;
   outline: none;
   appearance: none;
   cursor: pointer;
   font-family: $primary-font;
-  padding: .5rem;
+  transition: background-color .1s linear;
+
+  &:hover {
+    background-color: $grey
+  }
 }
