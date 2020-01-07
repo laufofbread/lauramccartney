@@ -37,6 +37,15 @@
 
     <div class="last-para">
       <p>
+        I am a ceramic artist living in London.<br>
+        I grew up in the North East of England. In 2018 I spent 3 months working in Mashiko, Japan.
+        Both places have influenced me greatly.<br>
+      </p>
+      <p>
+        A lot of my work is about damage and what it means to be damaged.<br>
+        I am also interested in transitions; Specifically, the point when we turn from one thing in to another.
+      </p>
+      <p>
         If you would like to contact me please email <a href="mailto:hello@lauramccartney.co.uk">hello@lauramccartney.co.uk</a>.<br>
         I look forward to hearing from you.
       </p>
@@ -99,13 +108,21 @@
     }
 
     .last-para {
-      grid-column: span 12;
+      grid-column: span 9;
+
+      p {
+        margin: 2rem 0;
+      }
     }
   }
 
   @media screen and (min-width: $breakpoint-lg) {
     .grid {
       grid-gap: $margin-md;
+    }
+
+    .last-para {
+      grid-column: span 7;
     }
   }
 
