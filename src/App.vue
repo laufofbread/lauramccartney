@@ -15,7 +15,9 @@
             </li>
 
             <li>
-              <router-link to="/shop/">Shop</router-link>
+              <router-link to="/shop/">Shop
+                <button class="snipcart-checkout cart-count"><span class="snipcart-items-count"></span></button>
+              </router-link>
             </li>
           </ul>
       </nav>

@@ -43,7 +43,7 @@
       </p>
       <p>
         A lot of my work is about damage and what it means to be damaged.<br>
-        I am also interested in transitions; Specifically, the point when we turn from one thing in to another.
+        I am also interested in transitions; specifically, the point when we turn from one thing in to another.
       </p>
       <p>
         If you would like to contact me please email <a href="mailto:hello@lauramccartney.co.uk">hello@lauramccartney.co.uk</a>.<br>
