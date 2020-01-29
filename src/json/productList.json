@@ -1,6 +1,6 @@
 [
   {
-    "name": "Organic 1",
+    "name": "Vase",
     "price": "150.00",
     "weight": "",
     "description": "Stoneware vase",
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "name": "Organic 2",
+    "name": "Vase",
     "price": "150.00",
     "weight": "",
     "description": "Stoneware vase",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "name": "Organic 3",
+    "name": "Vase",
     "price": "90.00",
     "weight": "",
     "description": "Stoneware vase",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "name": "Organic bowl",
+    "name": "Bowl",
     "price": "50.00",
     "weight": "",
     "description": "Stoneware bowl",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "name": "Lumpy 1",
+    "name": "Lumpy",
     "price": "170.00",
     "weight": "",
     "description": "Stoneware vase",
@@ -71,7 +71,7 @@
     ]
   },
   {
-    "name": "Lumpy 2",
+    "name": "Lumpy",
     "price": "90.00",
     "weight": "",
     "description": "Stoneware vase",
@@ -83,7 +83,7 @@
     ]
   },
   {
-    "name": "Lumpy 3",
+    "name": "Lumpy",
     "price": "90.00",
     "weight": "",
     "description": "Stoneware vase",

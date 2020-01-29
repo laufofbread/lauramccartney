@@ -4,9 +4,6 @@
     <prog-image :images="getCurrentImage" :alt="getCurrentItem.alt"></prog-image>
 
     <div class="gallery-nav">
-      <router-link class="prev-btn"
-                   :to="'/gallery/item/'+ getPrev"> &#60; </router-link>
-
         <aside class="gallery-info">
 
           <p class="primary-info">
@@ -15,10 +12,14 @@
           <p v-if="getCurrentItem.height && getCurrentItem.width" class="secondary-info">H {{ getCurrentItem.height }}, W {{ getCurrentItem.width }}</p>
           <p class="secondary-info">{{ getCurrentItem.location }}</p>
 
+          <nav class="pag-btns">
+            <router-link class="prev-btn"
+                         :to="'/gallery/item/'+ getPrev">Prev </router-link>
+                         /
+             <router-link class="next-btn"
+                          :to="'/gallery/item/'+ getNext"> Next</router-link>
+          </nav>
         </aside>
-
-      <router-link class="next-btn"
-                   :to="'/gallery/item/'+ getNext"> &#62; </router-link>
     </div>
 
   </section>
@@ -89,18 +90,6 @@ export default {
   }
 }
 
-.prev-btn, .next-btn {
-  font-size: 2rem;
-}
-
-.prev-btn {
-  margin-right: 1rem;
-}
-
-.next-btn {
-  margin-left: 1rem;
-}
-
 .primary-info {
   font-size: 1.1rem;
 }
@@ -108,6 +97,18 @@ export default {
 .secondary-info {
   font-size: .9rem;
   margin: 0;
+}
+
+.prev-btn {
+  padding-right: .5rem;
+}
+
+.next-btn {
+  padding-left: .5rem;
+}
+
+.pag-btns {
+  margin-top: 1rem;
 }
 
 </style>

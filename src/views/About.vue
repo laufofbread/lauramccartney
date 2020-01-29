@@ -1,7 +1,7 @@
 <template>
   <main class="grid">
 
-      <prog-image class="image1"
+      <prog-image class="image1 about-img"
                   :images="require('../img/about2.jpg?size=900')"
                   alt="Vessel"></prog-image>
       <div class="para para1">
@@ -19,12 +19,12 @@
       </div>
 
 
-      <prog-image class="image2"
+      <prog-image class="image2 about-img"
                   :images="require('../img/about1.jpg?size=900')"
                    alt="Vessel"></prog-image>
 
 
-      <prog-image class="image3"
+      <prog-image class="image3 about-img"
                   :images="require('../img/about4.jpg?size=900')"
                    alt="Vessel"></prog-image>
 
@@ -37,7 +37,7 @@
 
     <div class="last-para">
       <p>
-        I am a ceramic artist living in London.<br>
+        I am a potter living in London.<br>
         I grew up in the North East of England. In 2018 I spent 3 months working in Mashiko, Japan.
         Both places have influenced me greatly.<br>
       </p>
@@ -54,7 +54,7 @@
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   $margin-sm: 3rem;
   $margin-md: 6rem;
 
@@ -63,7 +63,7 @@
     line-height: 1.5;
   }
 
-  img {
+  .about-img {
     @media screen and (max-width: $breakpoint-small) {
       margin: 2rem 0;
     }

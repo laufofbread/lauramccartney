@@ -25,7 +25,8 @@
               :data-item-price="getCurrentProduct.price"
               :data-item-weight="getCurrentProduct.weight"
               data-item-url="/"
-              :data-item-description="getCurrentProduct.description">
+              :data-item-description="getCurrentProduct.description"
+              data-item-has-taxes-included="true">
               Add to cart
       </button>
 
@@ -167,5 +168,13 @@ $gap : .2rem;
 
 .btn {
   align-self: flex-start;
+}
+
+.secondary-info {
+  margin: 0;
+}
+
+.snipcart-add-item {
+  margin-top: $padding-big;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <transition name="slide-top" appear>
-      <nav>
+      <nav class="main-nav">
           <h1 class="home-link">
-            <a href="/">Laura McCartney</a>
+            <a href="/">Laura M<span>c</span>Cartney</a>
           </h1>
 
           <ul class="nav">
@@ -16,7 +16,9 @@
 
             <li>
               <router-link to="/shop/">Shop
-                <button class="snipcart-checkout cart-count"><span class="snipcart-items-count"></span></button>
+                <button v-show="count > 0" class="snipcart-checkout cart-count">
+                  <span>{{count}}</span>
+                </button>
               </router-link>
             </li>
           </ul>
@@ -66,6 +68,33 @@
 
   </div>
 </template>
+
+<script>
+  export default {
+    data() {
+      return {
+        showCount: false,
+        count: 0
+      }
+    },
+    mounted: function() {
+      document.addEventListener('snipcart.ready', () => {
+        var count = Snipcart.store.getState().cart.items.length;
+        this.updateItemTotal(count);
+
+        Snipcart.store.subscribe(() => {
+            var count = Snipcart.store.getState().cart.items.length;
+            this.updateItemTotal(count);
+        });
+      });
+    },
+    methods: {
+      updateItemTotal(qty) {
+        this.count = qty;
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
   @import "@/styles/_normalize.scss";
