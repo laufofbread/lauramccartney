@@ -60,7 +60,8 @@
       return {
         products: productList,
         activeImage: null,
-        activeThumbnail: 0
+        activeThumbnail: 0,
+        currentUrl: this.$route.query.page.fullPath
       }
     },
     computed: {
