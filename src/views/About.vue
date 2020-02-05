@@ -39,7 +39,7 @@
       <p>
         I am a potter living in London.<br>
         I grew up in the North East of England. In 2018 I spent 3 months working in Mashiko, Japan.
-        Both places have influenced me greatly.<br>
+        Both places have influenced me a great deal.<br>
       </p>
       <p>
         A lot of my work is about damage and what it means to be damaged.<br>

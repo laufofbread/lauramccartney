@@ -79,11 +79,11 @@
     },
     mounted: function() {
       document.addEventListener('snipcart.ready', () => {
-        var count = Snipcart.store.getState().cart.items.length;
+        var count = window.Snipcart.store.getState().cart.items.length;
         this.updateItemTotal(count);
 
-        Snipcart.store.subscribe(() => {
-            var count = Snipcart.store.getState().cart.items.length;
+        window.Snipcart.store.subscribe(() => {
+            var count = window.Snipcart.store.getState().cart.items.length;
             this.updateItemTotal(count);
         });
       });
