@@ -1,4 +1,4 @@
-.main-nav, footer {
+.main-nav, .footer {
   text-align: center;
 
   @media screen and (min-width: $breakpoint-small) {
@@ -106,7 +106,7 @@ nav {
   display: block;
 }
 
-footer {
+.footer {
   position: absolute;
   bottom: $padding-small;
   left: $padding-small;

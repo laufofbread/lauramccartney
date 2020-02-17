@@ -23,9 +23,10 @@
               :data-item-id="id"
               :data-item-name="getCurrentProduct.name"
               :data-item-price="getCurrentProduct.price"
+              data-item-url="http://lauramccartney.co.uk"
               :data-item-weight="getCurrentProduct.weight"
-              data-item-url="/"
               :data-item-description="getCurrentProduct.description"
+              :data-item-image="require('../img/'+ getCurrentProduct.images[0])"
               data-item-has-taxes-included="true">
               Add to cart
       </button>
@@ -61,7 +62,7 @@
         products: productList,
         activeImage: null,
         activeThumbnail: 0,
-        currentUrl: this.$route.query.page.fullPath
+        currentPath: "/#"+ this.$route.path
       }
     },
     computed: {
