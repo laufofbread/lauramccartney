@@ -5,15 +5,13 @@
         <div class="product-card"
            v-for="(product, i) in products"
            :key="i">
-           <router-link :to="'/shop/item/'+ i">
-             <prog-image :images="require('../img/'+ product.images[0] +'?size=700')" :alt="product.description"></prog-image>
+           <router-link :to="{path: '/shop/item/'+ product.slug.current, params: {id: product._id}}">
+             <img :src="imageUrlFor(product.images[0]).ignoreImageParams().width(700)" alt="" />
+            <h2 class="product-card-title">
+                {{ product.title }}
+            </h2>
+            <p class="price">£{{ product.price }}</p>
           </router-link>
-          <h2 class="product-card-title">
-            <router-link :to="'/shop/item/'+ i">
-              {{ product.name }}
-            </router-link>
-          </h2>
-          <p class="price">£{{ product.price }}</p>
         </div>
       </section>
 
@@ -21,14 +19,47 @@
 </template>
 
 <script>
-  const productList = require('../json/productList.json');
+import sanity from "../sanity";
+import imageUrlBuilder from "@sanity/image-url";
+
+const imageBuilder = imageUrlBuilder(sanity);
+const query = `*[_type == "product"] {
+  _id,
+  title,
+  name,
+  images,
+  price,
+  slug
+}`;
 
   export default {
     name: 'Shop',
     data () {
       return {
-        products: productList,
-        index: null
+        products: [],
+        loading: true
+      }
+    },
+    created() {
+      this.fetchData();
+    },
+    methods: {
+      imageUrlFor(source) {
+        return imageBuilder.image(source);
+      },
+      fetchData() {
+        this.error = null;
+        this.loading = true;
+
+        sanity.fetch(query).then(
+          products => {
+            this.loading = false;
+            this.products = products;
+          },
+          error => {
+            this.error = error;
+          }
+        );
       }
     }
   }
