@@ -82,8 +82,7 @@ const query = `*[_type == "product" && slug.current == $id] {
       return {
         product: null,
         activeImage: null,
-        activeThumbnail: 0,
-        currentPath: "/#"+ this.$route.path
+        activeThumbnail: 0
       }
     },
     created() {

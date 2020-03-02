@@ -14,13 +14,13 @@
               <router-link to="/about/">About</router-link>
             </li>
 
-            <li>
+            <!-- <li>
               <router-link to="/shop/">Shop
                 <button v-show="count > 0" class="snipcart-checkout cart-count">
                   <span>{{count}}</span>
                 </button>
               </router-link>
-            </li>
+            </li> -->
           </ul>
       </nav>
     </transition>
