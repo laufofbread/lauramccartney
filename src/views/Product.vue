@@ -34,7 +34,8 @@
               :data-item-weight="product.weight"
               :data-item-description="product.description"
               :data-item-image="urlFor(product.images[0]).width(200).url()"
-              data-item-has-taxes-included="true">
+              data-item-has-taxes-included="true"
+              data-item-quantity="1">
               Add to cart
       </button>
 
