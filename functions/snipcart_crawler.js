@@ -1,9 +1,9 @@
-const sanityClient = require('@sanity/client')
+const sanityClient = require('@sanity/client');
 const sanity = sanityClient({
   projectId: 'yth0o5v7',
   dataset: 'production',
   useCdn: false
-})
+});
 
 const query = `*[_type == "product"] {
   _id,
