@@ -1,32 +1,36 @@
 <template>
-  <main class="product">
+  <main v-if="product" class="product">
     <section class="product-gallery">
-      <prog-image class="gallery-active" :images="getActiveImage" :alt="getCurrentProduct.description"></prog-image>
+
+      <SanityImage class="gallery-active"
+                    :image="activeImage ? activeImage : product.images[0]"
+                    :alt="product.description"
+                    :width="900"/>
 
       <figure class="gallery-thumbnail"
               :class="[activeThumbnail == i ? 'active' : '']"
-              v-for="(image, i) in getCurrentProduct.images"
+              v-for="(image, i) in product.images"
               :key="i"
               @click="changeActiveImage(i)">
-        <prog-image :images="require('../img/'+ image +'?size=200')" :alt="getCurrentProduct.description"></prog-image>
+        <SanityImage :image="image" :alt="product.description" :width="160"/>
       </figure>
 
     </section>
 
     <section class="product-info">
-      <h1>{{getCurrentProduct.name}}</h1>
-      <p v-if="getCurrentProduct.price" class="secondary-info">£{{getCurrentProduct.price}}</p>
-      <p v-if="getCurrentProduct.description">{{getCurrentProduct.description}}</p>
-      <p v-if="getCurrentProduct.height && getCurrentProduct.width" class="secondary-info">Approx H {{ getCurrentProduct.height }}, W {{ getCurrentProduct.width }}</p>
+      <h1>{{product.title}}</h1>
+      <p v-if="product.price" class="secondary-info">£{{product.price}}</p>
+      <p v-if="product.description">{{product.description}}</p>
+      <p v-if="product.height && product.width" class="secondary-info">Approx H {{ product.height }}, W {{ product.width }}</p>
 
       <button class="snipcart-add-item btn"
               :data-item-id="id"
-              :data-item-name="getCurrentProduct.name"
-              :data-item-price="getCurrentProduct.price"
+              :data-item-name="product.title"
+              :data-item-price="product.price"
               data-item-url="http://lauramccartney.co.uk"
-              :data-item-weight="getCurrentProduct.weight"
-              :data-item-description="getCurrentProduct.description"
-              :data-item-image="require('../img/'+ getCurrentProduct.images[0])"
+              :data-item-weight="product.weight"
+              :data-item-description="product.description"
+              :data-item-image="urlFor(product.images[0]).width(200).url()"
               data-item-has-taxes-included="true">
               Add to cart
       </button>
@@ -52,32 +56,63 @@
 </template>
 
 <script>
-  const productList = require('../json/productList.json');
+import sanity from "../sanity";
+import SanityImage from '../components/SanityImage.vue';
+import imageUrlBuilder from '@sanity/image-url';
+
+const builder = imageUrlBuilder(sanity);
+
+const query = `*[_type == "product" && slug.current == $id] {
+  title,
+  name,
+  images,
+  price,
+  description,
+  weight,
+  height,
+  width
+}[0]`;
 
   export default {
     name: 'Product',
+    components: {
+      SanityImage
+    },
     props: ['id'],
     data() {
       return {
-        products: productList,
+        product: null,
         activeImage: null,
         activeThumbnail: 0,
         currentPath: "/#"+ this.$route.path
       }
     },
-    computed: {
-      getCurrentProduct() {
-        return this.products[this.id];
-      },
-      getActiveImage() {
-        if(this.activeImage) return require('../img/'+ this.activeImage +'')
-        else return require('../img/'+ this.getCurrentProduct.images[0] +'');
-      }
+    created() {
+      this.fetchData();
     },
     methods: {
+      urlFor(source) {
+        return builder.image(source)
+      },
       changeActiveImage(i) {
-        this.activeImage = this.getCurrentProduct.images[i];
+        this.activeImage = this.product.images[i];
         this.activeThumbnail = i;
+      },
+      fetchData() {
+        this.error = null;
+        this.loading = true;
+
+        sanity.fetch(query, { id: this.id }).then(
+
+          product => {
+
+            this.loading = false;
+            this.product = product;
+          },
+          error => {
+            this.error = error;
+          }
+        );
       }
     }
   }

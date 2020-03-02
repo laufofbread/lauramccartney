@@ -27,15 +27,20 @@
 </template>
 
 <script>
+import sanity from "../sanity";
+import SanityImage from '../components/SanityImage.vue';
 
-const imageList = require('../json/galleryList.json');
+const query = `*[_type == "gallery" && _id == $id] {
+  title,
+  description,
+  image,
+  location
+}`;
 
 export default {
   props: ['id'],
-  data() {
-    return {
-      items: imageList,
-    }
+  components: {
+    SanityImage
   },
   computed: {
     getCurrentItem() {

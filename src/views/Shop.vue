@@ -5,8 +5,10 @@
         <div class="product-card"
            v-for="(product, i) in products"
            :key="i">
-           <router-link :to="{path: '/shop/item/'+ product.slug.current, params: {id: product._id}}">
-             <img :src="imageUrlFor(product.images[0]).ignoreImageParams().width(700)" alt="" />
+           <router-link :to="{path: '/shop/item/'+ product.slug.current}">
+
+            <SanityImage :image="product.images[0]" :alt="product.description" :width="700"/>
+
             <h2 class="product-card-title">
                 {{ product.title }}
             </h2>
@@ -20,9 +22,8 @@
 
 <script>
 import sanity from "../sanity";
-import imageUrlBuilder from "@sanity/image-url";
+import SanityImage from '../components/SanityImage.vue';
 
-const imageBuilder = imageUrlBuilder(sanity);
 const query = `*[_type == "product"] {
   _id,
   title,
@@ -34,6 +35,9 @@ const query = `*[_type == "product"] {
 
   export default {
     name: 'Shop',
+    components: {
+      SanityImage
+    },
     data () {
       return {
         products: [],
@@ -44,9 +48,6 @@ const query = `*[_type == "product"] {
       this.fetchData();
     },
     methods: {
-      imageUrlFor(source) {
-        return imageBuilder.image(source);
-      },
       fetchData() {
         this.error = null;
         this.loading = true;
@@ -68,9 +69,7 @@ const query = `*[_type == "product"] {
 
 <style lang="scss">
   .product-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
-    grid-gap: $padding-big;
+    columns: 3 300px;
   }
 
   .product-card-title {

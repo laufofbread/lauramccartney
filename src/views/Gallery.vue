@@ -1,14 +1,11 @@
 <template>
   <main class="gallery">
 
-      <section class="thumbnails">
-        <div class="thumbnail"
+      <section class="columns">
+        <div class="gallery-item"
            v-for="(image, i) in images"
            :key="i">
-           <router-link :to="'/gallery/item/'+ i">
-             <prog-image :images="require('../img/'+ image.src +'?size=320')"
-                          :alt="image.alt"></prog-image>
-          </router-link>
+             <SanityImage :image="image.image" :alt="image.description" :width="2400" responsive/>
         </div>
       </section>
 
@@ -16,14 +13,44 @@
 </template>
 
 <script>
-  const imageList = require('../json/galleryList.json');
+import sanity from "../sanity";
+import SanityImage from '../components/SanityImage.vue';
+
+const query = `*[_type == "gallery"] {
+  _id,
+  title,
+  description,
+  image
+}`;
 
   export default {
     name: 'Gallery',
+    components: {
+      SanityImage
+    },
     data () {
       return {
-        images: imageList,
-        index: null
+        images: [],
+        loading: true
+      }
+    },
+    created() {
+      this.fetchData();
+    },
+    methods: {
+      fetchData() {
+        this.error = null;
+        this.loading = true;
+
+        sanity.fetch(query).then(
+          images => {
+            this.loading = false;
+            this.images = images;
+          },
+          error => {
+            this.error = error;
+          }
+        );
       }
     }
   }
@@ -31,9 +58,12 @@
 
 
 <style lang="scss">
-  .thumbnails {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(13rem,2fr));
-    grid-gap: $padding-big;
+  .columns {
+    columns: 2 400px;
+    column-gap: 1rem;
+  }
+
+  .gallery-item {
+    margin-bottom: 1rem;
   }
 </style>
