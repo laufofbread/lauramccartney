@@ -6,7 +6,7 @@ Vue.use(Router)
 
 export default new Router({
   // Remove until I stop using github pages
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
