@@ -49,7 +49,6 @@ const query = `*[_type == "product"] {
 
         sanity.fetch(query).then(
           products => {
-            console.log(products);
             this.loading = false;
             this.products = products;
           },

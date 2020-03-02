@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 
   <section class="gallery-item">
     <prog-image :images="getCurrentImage" :alt="getCurrentItem.alt"></prog-image>
@@ -116,4 +116,4 @@ export default {
   margin-top: 1rem;
 }
 
-</style>
+</style> -->
