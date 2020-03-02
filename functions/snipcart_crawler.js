@@ -1,4 +1,4 @@
-import sanity from "../sanity";
+import sanity from "./src/sanity";
 const query = `*[_type == "product"] {
   _id,
   title,
