@@ -30,7 +30,7 @@
               :data-item-id="id"
               :data-item-name="product.title"
               :data-item-price="product.price"
-              data-item-url="https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler.json"
+              data-item-url="https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler"
               :data-item-weight="product.weight"
               :data-item-description="product.description"
               :data-item-image="urlFor(product.images[0]).width(200).url()"
