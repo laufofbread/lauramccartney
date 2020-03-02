@@ -27,7 +27,7 @@
       </p>
 
       <button class="snipcart-add-item btn"
-              :data-item-id="id"
+              :data-item-id="product._id"
               :data-item-name="product.title"
               :data-item-price="product.price"
               data-item-url="https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler"
@@ -51,10 +51,6 @@
         </details>
 
     </section>
-
-
-
-
   </main>
 </template>
 
@@ -65,6 +61,7 @@ import imageUrlBuilder from '@sanity/image-url';
 const builder = imageUrlBuilder(sanity);
 
 const query = `*[_type == "product" && slug.current == $id] {
+  _id,
   title,
   name,
   images,
