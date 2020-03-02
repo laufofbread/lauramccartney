@@ -32,7 +32,9 @@ exports.handler = function(event, context, callback) {
           name: product.title,
       		price: product.price,
           url: 'https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler',
-          image: product.imageUrl
+          image: product.imageUrl,
+          stock: 1,
+          allowOutOfStockPurchases: false
       	};
       });
 
