@@ -1,4 +1,11 @@
-import sanity from "./src/sanity";
+import sanityClient from "@sanity/client";
+
+export default sanityClient({
+  projectId: "yth0o5v7",
+  dataset: "production",
+  useCdn: true
+});
+
 const query = `*[_type == "product"] {
   _id,
   title,
