@@ -7,7 +7,7 @@
            :key="i">
            <router-link :to="{path: '/shop/item/'+ product.slug.current}">
 
-            <SanityImage :image="product.images[0]" :alt="product.description" :width="700"/>
+            <sanity-image :image="product.images[0]" :alt="product.description" :width="700"/>
 
             <h2 class="product-card-title">
                 {{ product.title }}
@@ -22,12 +22,10 @@
 
 <script>
 import sanity from "../sanity";
-import SanityImage from '../components/SanityImage.vue';
 
 const query = `*[_type == "product"] {
   _id,
   title,
-  name,
   images,
   price,
   slug
@@ -35,9 +33,6 @@ const query = `*[_type == "product"] {
 
   export default {
     name: 'Shop',
-    components: {
-      SanityImage
-    },
     data () {
       return {
         products: [],
@@ -54,6 +49,7 @@ const query = `*[_type == "product"] {
 
         sanity.fetch(query).then(
           products => {
+            console.log(products);
             this.loading = false;
             this.products = products;
           },

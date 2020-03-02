@@ -5,7 +5,7 @@
         <div class="gallery-item"
            v-for="(image, i) in images"
            :key="i">
-             <SanityImage :image="image.image" :alt="image.description" :width="2400" responsive/>
+             <sanity-image :image="image.image" :alt="image.description" :width="2400" responsive/>
         </div>
       </section>
 
@@ -14,7 +14,6 @@
 
 <script>
 import sanity from "../sanity";
-import SanityImage from '../components/SanityImage.vue';
 
 const query = `*[_type == "gallery"] {
   _id,
@@ -25,9 +24,6 @@ const query = `*[_type == "gallery"] {
 
   export default {
     name: 'Gallery',
-    components: {
-      SanityImage
-    },
     data () {
       return {
         images: [],

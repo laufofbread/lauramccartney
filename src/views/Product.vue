@@ -2,7 +2,7 @@
   <main v-if="product" class="product">
     <section class="product-gallery">
 
-      <SanityImage class="gallery-active"
+      <sanity-image class="gallery-active"
                     :image="activeImage ? activeImage : product.images[0]"
                     :alt="product.description"
                     :width="900"/>
@@ -12,16 +12,19 @@
               v-for="(image, i) in product.images"
               :key="i"
               @click="changeActiveImage(i)">
-        <SanityImage :image="image" :alt="product.description" :width="160"/>
+        <sanity-image :image="image" :alt="product.description" :width="200"/>
       </figure>
 
     </section>
 
     <section class="product-info">
       <h1>{{product.title}}</h1>
-      <p v-if="product.price" class="secondary-info">£{{product.price}}</p>
+      <p v-if="product.price">£{{product.price}}</p>
       <p v-if="product.description">{{product.description}}</p>
-      <p v-if="product.height && product.width" class="secondary-info">Approx H {{ product.height }}, W {{ product.width }}</p>
+      <p v-if="product.height && product.width" class="secondary-info">
+        Dimensions: H {{ product.height }}cm,
+        W {{ product.width }}cm
+      </p>
 
       <button class="snipcart-add-item btn"
               :data-item-id="id"
@@ -57,7 +60,6 @@
 
 <script>
 import sanity from "../sanity";
-import SanityImage from '../components/SanityImage.vue';
 import imageUrlBuilder from '@sanity/image-url';
 
 const builder = imageUrlBuilder(sanity);
@@ -75,9 +77,6 @@ const query = `*[_type == "product" && slug.current == $id] {
 
   export default {
     name: 'Product',
-    components: {
-      SanityImage
-    },
     props: ['id'],
     data() {
       return {
@@ -178,7 +177,7 @@ $gap : .2rem;
     margin: 0 auto 0 2rem;
 
     h1 {
-      margin-top: 0;
+      margin: 0 0 .5rem 0;
     }
   }
 
@@ -208,7 +207,7 @@ $gap : .2rem;
 }
 
 .secondary-info {
-  margin: 0;
+  font-size: .8rem;
 }
 
 .snipcart-add-item {
