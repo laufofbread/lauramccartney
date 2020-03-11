@@ -27,7 +27,7 @@
       </p>
 
       <button class="snipcart-add-item btn"
-              :data-item-id="product._id"
+              :data-item-id="product.slug.current"
               :data-item-name="product.title"
               :data-item-price="product.price"
               data-item-url="https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler"

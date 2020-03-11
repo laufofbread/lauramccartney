@@ -35,8 +35,7 @@ const snipcartUrl = "https://app.snipcart.com/api/products/";
 const snipcartQuery = {
   method: 'GET',
   headers: {
-    'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Accept': 'application/json'
   },
   auth: {
     'user': 'ZDJlZDQwMjMtNjI0MC00MGZiLThhMDQtMDhhMDM5YzY5ZGYzNjM2OTM0Mjg4MjU5NTA1MDAw'
