@@ -15,11 +15,12 @@
 <script>
 import sanity from "../sanity";
 
-const query = `*[_type == "gallery"] {
+const query = `*[_type == "gallery"] | order(_createdAt desc) {
   _id,
   title,
   description,
-  image
+  image,
+  _createdAt
 }`;
 
   export default {
@@ -41,13 +42,29 @@ const query = `*[_type == "gallery"] {
         sanity.fetch(query).then(
           images => {
             this.loading = false;
-            this.images = images;
+            this.images = this.reorder(images);
           },
           error => {
             this.error = error;
           }
         );
-      }
+      },
+      reorder(arr) {
+        const cols = 2;
+        const out = [];
+        let col = 0;
+
+        while(col < cols) {
+            for(let i = 0; i < arr.length; i += cols) {
+                let _val = arr[i + col];
+                if (_val !== undefined)
+                    out.push(_val);
+            }
+            col++;
+        }
+
+        return out;
+    }
     }
   }
 </script>
@@ -55,11 +72,13 @@ const query = `*[_type == "gallery"] {
 
 <style lang="scss">
   .columns {
-    columns: 2 400px;
-    column-gap: 1rem;
+    column-count: 2;
   }
 
   .gallery-item {
     margin-bottom: 1rem;
+
+    break-inside: avoid;
+    page-break-inside: avoid;
   }
 </style>

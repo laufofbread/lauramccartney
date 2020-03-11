@@ -69,7 +69,8 @@ const query = `*[_type == "product" && slug.current == $id] {
   description,
   weight,
   height,
-  width
+  width,
+  slug
 }[0]`;
 
   export default {
@@ -98,9 +99,7 @@ const query = `*[_type == "product" && slug.current == $id] {
         this.loading = true;
 
         sanity.fetch(query, { id: this.id }).then(
-
           product => {
-
             this.loading = false;
             this.product = product;
           },

@@ -6,7 +6,7 @@ const sanity = sanityClient({
 });
 
 const query = `*[_type == "product"] {
-  _id,
+  slug,
   title,
   "imageUrl": images[0].asset->url,
   price,
@@ -28,13 +28,11 @@ exports.handler = function(event, context, callback) {
   .then((products) => {
       var products = products.map((product) => {
       	return {
-      		id: product._id,
+      		id: product.slug.current,
           name: product.title,
       		price: product.price,
           url: 'https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler',
-          image: product.imageUrl,
-          stock: 1,
-          allowOutOfStockPurchases: false
+          image: product.imageUrl
       	};
       });
 
@@ -45,5 +43,5 @@ exports.handler = function(event, context, callback) {
       	},
       	body: JSON.stringify(products),
       });
-    }); // we would normally handle errors right? ;)
+    });
 }
