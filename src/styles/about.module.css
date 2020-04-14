@@ -1,0 +1,14 @@
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+}
+
+img {
+  margin: var(--container-padding) 0;
+}
+
+.text {
+  margin: 4rem 0;
+}

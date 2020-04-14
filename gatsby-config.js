@@ -32,6 +32,7 @@ module.exports = {
       options: {
         projectId: "yth0o5v7",
         dataset: "production",
+        watchMode: true
       },
     },
     {

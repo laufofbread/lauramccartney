@@ -1,0 +1,19 @@
+.headline {
+  color: var(--white);
+  text-align: center;
+  font-size: var(--headline-size);
+  font-weight: 700;
+  letter-spacing: .05rem;
+  line-height: 1.4;
+
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (min-width: 520px) {
+  :root {
+    --headline-size: 2.5rem;
+  }
+}

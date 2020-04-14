@@ -6,10 +6,11 @@ import BackgroundImage from 'gatsby-background-image'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import styles from "../styles/home.module.css"
+
 export const query = graphql`
   query IndexPageQuery {
     page: sanityHome {
-      id
       image {
         asset {
           fluid(maxWidth: 2000) {
@@ -26,17 +27,28 @@ const IndexPage = props => {
   const { data, errors } = props
   const page = data && data.page
 
+  if (errors) {
+    throw errors
+  }
+
   return (
-    <Layout>
-      <BackgroundImage
-            Tag="section"
-            fluid={page.image.asset.fluid}
-            backgroundColor={`#040e18`}
-          >
-            <BlockContent blocks={page._rawText} />
-      </BackgroundImage>
-      <SEO title="Home" />
-    </Layout>
+    <div className="homepage">
+      <Layout>
+        <BackgroundImage
+              Tag="section"
+              fluid={page.image.asset.fluid}
+              style={{
+                backgroundSize: 'cover',
+                position: 'absolute'
+              }}
+            >
+            <div className={styles.headline}>
+              <BlockContent blocks={page._rawText} />
+            </div>
+        </BackgroundImage>
+        <SEO title="Home" />
+      </Layout>
+    </div>
   )
 }
 
