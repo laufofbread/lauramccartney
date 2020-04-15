@@ -3,11 +3,20 @@
   font-size: 1.3rem;
 }
 
-.header a {
-  color: var(--black);
+.navigation a {
+  color: var(--dark-grey);
   text-decoration: none;
   font-weight: 200;
   margin-right: 1rem;
+}
+
+.navigation a:hover {
+  color: var(--black);
+}
+
+.navigation .active {
+  color: var(--black);
+  border-bottom: 2px solid var(--secondary);
 }
 
 .logo {
@@ -17,11 +26,35 @@
 }
 
 .logo a {
+  color: var(--black);
   font-weight: 700;
 }
 
 .navigation {
   text-align: center;
+}
+
+.footer {
+  padding: var(--container-padding);
+  text-align: center;
+  margin: var(--container-padding) 0;
+}
+
+.footer label,
+.footer input {
+  display: block;
+  font-size: 1rem;
+}
+
+.footer input {
+  width: 100%;
+  max-width: 250px;
+  margin: .7rem auto;
+}
+
+.response {
+  font-size: 1rem;
+  color: var(--black);
 }
 
 @media (min-width: 760px) {

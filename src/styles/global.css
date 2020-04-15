@@ -5,6 +5,7 @@
   --light-grey: #878787;
   --primary: #FFEEE6;
   --secondary: #FF996C;
+  --terciary: #FFA388;
 
   --headline-size: 2rem;
   --container-padding: 1rem;
@@ -55,6 +56,32 @@ p a {
   border-bottom: 2px solid var(--secondary);
 }
 
+button {
+  appearance: none;
+  background-color: var(--secondary);
+  outline: none;
+  border: none;
+  color: var(--white);
+  font-weight: 400;
+  font-size: 1rem;
+  font-family: nobel, sans-serif;
+  padding: .4rem 2rem;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--terciary);
+}
+
+input[type=email] {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--dark-grey);
+  font-family: nobel, sans-serif;
+  font-weight: 200;
+}
+
 .gatsby-background-image-wrapper {
   top: 0;
   right: 0;
@@ -64,11 +91,13 @@ p a {
   z-index: -1;
 }
 
-.homepage .logo-link {
+.homepage .logo-link,
+.homepage footer {
   display: none;
 }
 
-.homepage header a {
+.homepage header a,
+.homepage header a:hover {
   color: var(--white);
 }
 

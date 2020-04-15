@@ -43,9 +43,12 @@ module.exports = {
           families: ['nobel']
         }
       }
+    },
+    {
+        resolve: 'gatsby-plugin-mailchimp',
+        options: {
+            endpoint: 'https://lauramccartney.us20.list-manage.com/subscribe/post?u=808727f788695c507a499d0a7&amp;id=c3e23677a0',
+        },
     }
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }
