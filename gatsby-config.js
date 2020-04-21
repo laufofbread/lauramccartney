@@ -40,7 +40,7 @@ module.exports = {
       options: {
         typekit: {
           id: 'twv1ruz',
-          families: ['nobel']
+          families: ['nobel', 'mrs-eaves']
         }
       }
     },

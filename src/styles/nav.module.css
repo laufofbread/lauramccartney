@@ -6,7 +6,7 @@
 .navigation a {
   color: var(--dark-grey);
   text-decoration: none;
-  font-weight: 200;
+  font-weight: var(--font-light);
   margin-right: 1rem;
 }
 
@@ -27,7 +27,7 @@
 
 .logo a {
   color: var(--black);
-  font-weight: 700;
+  font-weight: var(--font-bold);
 }
 
 .navigation {

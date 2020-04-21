@@ -35,6 +35,7 @@ const IndexPage = props => {
     <div className="homepage">
       <Layout>
         <BackgroundImage
+              className={styles.fullBgImage}
               Tag="section"
               fluid={page.image.asset.fluid}
               style={{

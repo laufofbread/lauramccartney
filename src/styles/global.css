@@ -7,9 +7,17 @@
   --secondary: #FF996C;
   --terciary: #FFA388;
 
+  --font-primary: 'nobel';
+  --font-secondary: 'mrs-eaves';
+  --font-book: 300;
+  --font-light: 200;
+  --font-bold: 700;
+  --font-reg: 400;
+
   --headline-size: 2rem;
   --container-padding: 1rem;
   --root-font-size: 14px;
+  --grid-gap: 2rem;
 }
 
 * {
@@ -23,9 +31,9 @@ html {
 body {
   position: relative;
 
-  font-family: nobel, sans-serif;
+  font-family: var(--font-primary), sans-serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: var(--font-book);
 
   background-color: var(--primary);
   margin: 0;
@@ -62,9 +70,9 @@ button {
   outline: none;
   border: none;
   color: var(--white);
-  font-weight: 400;
+  font-weight: var(--font-book);
   font-size: 1rem;
-  font-family: nobel, sans-serif;
+  font-family: var(--font-primary), sans-serif;
   padding: .4rem 2rem;
   border-radius: 16px;
   cursor: pointer;
@@ -78,17 +86,12 @@ input[type=email] {
   background: transparent;
   border: none;
   border-bottom: 1px solid var(--dark-grey);
-  font-family: nobel, sans-serif;
-  font-weight: 200;
+  font-family: var(--font-primary), sans-serif;
+  font-weight: var(--font-light);
 }
 
-.gatsby-background-image-wrapper {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  z-index: -1;
+.main-container {
+  padding: var(--container-padding);
 }
 
 .homepage .logo-link,
@@ -105,5 +108,12 @@ input[type=email] {
   :root {
     --container-padding: 2rem;
     --root-font-size: 16px;
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --container-padding: 3rem;
+    --grid-gap: 3rem;
   }
 }

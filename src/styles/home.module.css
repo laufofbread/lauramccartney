@@ -2,14 +2,24 @@
   color: var(--white);
   text-align: center;
   font-size: var(--headline-size);
-  font-weight: 700;
+  font-weight: var(--font-bold);
   letter-spacing: .05rem;
   line-height: 1.4;
+  margin: 0;
 
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.full-bg-image {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: -1;
 }
 
 @media (min-width: 520px) {
