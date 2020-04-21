@@ -5,7 +5,7 @@
 }
 
 img {
-  margin: var(--container-padding) 0;
+  margin-bottom: var(--container-padding);
 }
 
 .text {

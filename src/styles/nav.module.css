@@ -37,7 +37,7 @@
 .footer {
   padding: var(--container-padding);
   text-align: center;
-  margin: var(--container-padding) 0;
+  margin: var(--container-padding) 0 0 0;
 }
 
 .footer label,

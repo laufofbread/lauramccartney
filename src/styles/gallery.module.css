@@ -1,153 +1,162 @@
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-gap: var(--grid-gap);
-}
-
-.grid img {
-  margin: 0;
-}
-
 .paragraphOne,
 .paragraphTwo,
 .paragraphThree {
   font-family: var(--font-secondary), serif;
-
-  display: flex;
-  align-items: center;
 }
 
 .paragraphOne p,
 .paragraphTwo p,
 .paragraphThree p {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
 }
 
-.paragraphOne {
-  grid-column-start: 1;
-  grid-column-end: 7;
+@media (min-width: 600px) {
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-gap: var(--grid-gap);
+  }
 
-  grid-row-start: 7;
-  grid-row-end: 10;
+  .paragraphOne,
+  .paragraphTwo,
+  .paragraphThree {
+    display: flex;
+    align-items: center;
+  }
+
+  .paragraphOne {
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 7;
+    grid-row-end: 10;
+  }
+
+  .imageOne {
+    grid-column-start: 1;
+    grid-column-end: 10;
+
+    grid-row-start: 1;
+    grid-row-end: 7;
+  }
+
+  .imageTwo {
+    grid-column-start: 7;
+    grid-column-end: 13;
+
+    grid-row-start: 5;
+    grid-row-end: 12;
+
+    z-index: 100;
+  }
+
+  .imageThree {
+    grid-column-start: 1;
+    grid-column-end: 9;
+
+    grid-row-start: 10;
+    grid-row-end: 16;
+  }
+
+  .imageFour {
+    grid-column-start: 6;
+    grid-column-end: 13;
+
+    grid-row-start: 14;
+    grid-row-end: 20;
+
+    z-index: 100;
+  }
+
+  .imageFive {
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    grid-row-start: 18;
+    grid-row-end: 23;
+  }
+
+  .imageSix {
+    grid-column-start: 8;
+    grid-column-end: 13;
+
+    grid-row-start: 22;
+    grid-row-end: 26;
+  }
+
+  .imageSeven {
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    grid-row-start: 24;
+    grid-row-end: 34;
+
+    z-index: 100;
+  }
+
+  .paragraphTwo {
+    grid-column-start: 9;
+    grid-column-end: 13;
+
+    grid-row-start: 26;
+    grid-row-end: 33;
+  }
+
+  .imageEight {
+    grid-column-start: 5;
+    grid-column-end: 13;
+
+    grid-row-start: 33;
+    grid-row-end: 37;
+  }
+
+  .imageNine {
+    grid-column-start: 1;
+    grid-column-end: 6;
+
+    grid-row-start: 35;
+    grid-row-end: 40;
+  }
+
+  .imageTen {
+    grid-column-start: 6;
+    grid-column-end: 13;
+
+    grid-row-start: 38;
+    grid-row-end: 48;
+
+    z-index: 100;
+  }
+
+  .paragraphThree {
+    grid-column-start: 1;
+    grid-column-end: 5;
+
+    grid-row-start: 40;
+    grid-row-end: 46;
+  }
+
+  .imageEleven {
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    grid-row-start: 46;
+    grid-row-end: 50;
+  }
+
+  .imageTwelve {
+    grid-column-start: 5;
+    grid-column-end: 13;
+
+    grid-row-start: 49;
+    grid-row-end: 56;
+  }
 }
 
-.imageOne {
-  grid-column-start: 1;
-  grid-column-end: 10;
-
-  grid-row-start: 1;
-  grid-row-end: 7;
-}
-
-.imageTwo {
-  grid-column-start: 7;
-  grid-column-end: 13;
-
-  grid-row-start: 5;
-  grid-row-end: 12;
-
-  z-index: 100;
-}
-
-.imageThree {
-  grid-column-start: 1;
-  grid-column-end: 9;
-
-  grid-row-start: 10;
-  grid-row-end: 16;
-}
-
-.imageFour {
-  grid-column-start: 6;
-  grid-column-end: 13;
-
-  grid-row-start: 14;
-  grid-row-end: 20;
-
-  z-index: 100;
-}
-
-.imageFive {
-  grid-column-start: 1;
-  grid-column-end: 7;
-
-  grid-row-start: 18;
-  grid-row-end: 23;
-}
-
-.imageSix {
-  grid-column-start: 8;
-  grid-column-end: 13;
-
-  grid-row-start: 22;
-  grid-row-end: 26;
-}
-
-.imageSeven {
-  grid-column-start: 1;
-  grid-column-end: 8;
-
-  grid-row-start: 24;
-  grid-row-end: 34;
-
-  z-index: 100;
-}
-
-.paragraphTwo {
-  grid-column-start: 9;
-  grid-column-end: 13;
-
-  grid-row-start: 26;
-  grid-row-end: 33;
-}
-
-.imageEight {
-  grid-column-start: 5;
-  grid-column-end: 13;
-
-  grid-row-start: 33;
-  grid-row-end: 37;
-}
-
-.imageNine {
-  grid-column-start: 1;
-  grid-column-end: 6;
-
-  grid-row-start: 35;
-  grid-row-end: 40;
-}
-
-.imageTen {
-  grid-column-start: 6;
-  grid-column-end: 13;
-
-  grid-row-start: 38;
-  grid-row-end: 48;
-
-  z-index: 100;
-}
-
-.paragraphThree {
-  grid-column-start: 1;
-  grid-column-end: 5;
-
-  grid-row-start: 40;
-  grid-row-end: 46;
-}
-
-.imageEleven {
-  grid-column-start: 1;
-  grid-column-end: 8;
-
-  grid-row-start: 46;
-  grid-row-end: 50;
-}
-
-.imageTwelve {
-  grid-column-start: 5;
-  grid-column-end: 13;
-
-  grid-row-start: 49;
-  grid-row-end: 56;
+@media (min-width: 1440px) {
+  .paragraphOne p,
+  .paragraphTwo p,
+  .paragraphThree p {
+    font-size: 1.8rem;
+  }
 }
