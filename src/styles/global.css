@@ -18,6 +18,7 @@
   --container-padding: 1rem;
   --root-font-size: 14px;
   --grid-gap: 2rem;
+  --underline: 2px;
 }
 
 * {
@@ -61,7 +62,7 @@ a:hover {
 }
 
 p a {
-  border-bottom: 2px solid var(--secondary);
+  border-bottom: var(--underline) solid var(--secondary);
 }
 
 img {
@@ -92,6 +93,11 @@ input[type=email] {
   border-bottom: 1px solid var(--dark-grey);
   font-family: var(--font-primary), sans-serif;
   font-weight: var(--font-light);
+}
+
+.site-wrapper {
+  max-width: 1330px;
+  margin: 0 auto;
 }
 
 .main-container {

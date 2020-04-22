@@ -152,11 +152,3 @@
     grid-row-end: 56;
   }
 }
-
-@media (min-width: 1440px) {
-  .paragraphOne p,
-  .paragraphTwo p,
-  .paragraphThree p {
-    font-size: 1.8rem;
-  }
-}

@@ -4,7 +4,7 @@
   margin: 0 auto;
 }
 
-img {
+.container img {
   margin-bottom: var(--container-padding);
 }
 
