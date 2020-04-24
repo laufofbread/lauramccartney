@@ -40,7 +40,7 @@ const Footer = () => {
           onChange={handleEmailChange}
         />
         </label>
-        <button type="submit">Subscribe</button>
+        <button className="btn" type="submit">Subscribe</button>
       </form>
       <p className={styles.response} dangerouslySetInnerHTML={response}></p>
     </footer>

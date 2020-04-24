@@ -49,6 +49,12 @@ module.exports = {
         options: {
             endpoint: 'https://lauramccartney.us20.list-manage.com/subscribe/post?u=808727f788695c507a499d0a7&amp;id=c3e23677a0',
         },
+    },
+    {
+      resolve: 'gatsby-plugin-snipcartv3',
+      options: {
+        apiKey: 'ZDJlZDQwMjMtNjI0MC00MGZiLThhMDQtMDhhMDM5YzY5ZGYzNjM2OTM0Mjg4MjU5NTA1MDAw'
+      }
     }
   ],
 }

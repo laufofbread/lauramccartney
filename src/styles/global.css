@@ -69,7 +69,7 @@ img {
   margin: 0;
 }
 
-button {
+.btn {
   appearance: none;
   background-color: var(--secondary);
   outline: none;
@@ -83,7 +83,7 @@ button {
   cursor: pointer;
 }
 
-button:hover {
+.btn:hover {
   background-color: var(--terciary);
 }
 
