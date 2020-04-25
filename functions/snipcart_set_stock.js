@@ -1,3 +1,5 @@
+const fetch = require('node-fetch');
+
 exports.handler = function(event, context, callback) {
 
   console.log(event);
@@ -10,7 +12,7 @@ exports.handler = function(event, context, callback) {
     });
   }
 
-  return fetch('https://app.snipcart.com/api/products',
+  const data = fetch('https://app.snipcart.com/api/products',
     {
       method:'GET',
       headers:{
@@ -20,5 +22,9 @@ exports.handler = function(event, context, callback) {
         "user": process.env.SNIPCART_PRIVATE_KEY
       },
       body: JSON.stringify(data)
-    })
+    });
+
+    console.log(data);
+
+    return data
 }
