@@ -27,4 +27,6 @@ exports.handler = function(event, context, callback) {
       	body: JSON.stringify(data),
       });
     });
+
+    return response
 }
