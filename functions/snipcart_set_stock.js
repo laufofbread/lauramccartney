@@ -16,7 +16,16 @@ exports.handler = function(event, context, callback) {
         "Content-Type": "application/json",
         "Authorization": `Basic ${process.env.SNIPCART_PRIVATE_KEY}`
       }
-    });
+    }).then((data) => {
+      console.log(data);
 
-    return response;
+      return callback(null, {
+      	statusCode: 200,
+      	headers: {
+      		"Content-Type": "application/json",
+          "Authorization": `Basic ${process.env.SNIPCART_PRIVATE_KEY}`
+      	},
+      	body: JSON.stringify(data),
+      });
+    });
 }
