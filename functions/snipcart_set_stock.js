@@ -9,22 +9,14 @@ exports.handler = function(event, context, callback) {
     });
   }
 
-  fetch('https://app.snipcart.com/api/products',
+  const response = fetch('https://app.snipcart.com/api/products',
     {
       method:'GET',
       headers:{
         "Content-Type": "application/json",
         "Authorization": `Basic ${process.env.SNIPCART_PRIVATE_KEY}`
       }
-    }).then((data) => {
-      console.log(data);
-
-      return callback(null, {
-      	statusCode: 200,
-      	headers: {
-      		"Content-Type": "application/json"
-      	},
-      	body: JSON.stringify(data),
-      });
     });
+
+    return response;
 }
