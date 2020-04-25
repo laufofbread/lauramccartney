@@ -20,8 +20,7 @@ exports.handler = function(event, context, callback) {
       },
       auth:{
         "user": process.env.SNIPCART_PRIVATE_KEY
-      },
-      body: JSON.stringify(body)
+      }
     }).then((data) => {
       console.log(data);
 
