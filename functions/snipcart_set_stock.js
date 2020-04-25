@@ -1,16 +1,13 @@
 const fetch = require('node-fetch');
 
 exports.handler = function(event, context, callback) {
-
-  console.log(event);
-  console.log(context);
-  //
-  // if(event.httpMethod !== 'GET') {
-  //   return callback(null, {
-  //     statusCode: 200,
-  //     body: ''
-  //   });
-  // }
+  
+  if(event.httpMethod !== 'GET') {
+    return callback(null, {
+      statusCode: 200,
+      body: ''
+    });
+  }
 
   fetch('https://app.snipcart.com/api/products',
     {
@@ -22,7 +19,7 @@ exports.handler = function(event, context, callback) {
         "user": process.env.SNIPCART_PRIVATE_KEY
       }
     }).then((data) => {
-      console.log(data);
+      console.log(process.env.SNIPCART_PRIVATE_KEY);
 
       return callback(null, {
       	statusCode: 200,
