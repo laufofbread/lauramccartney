@@ -22,8 +22,7 @@ exports.handler = function(event, context, callback) {
       return callback(null, {
       	statusCode: 200,
       	headers: {
-      		"Content-Type": "application/json",
-          "Authorization": `Basic ${process.env.SNIPCART_PRIVATE_KEY}`
+      		"Content-Type": "application/json"
       	},
       	body: JSON.stringify(data),
       });
