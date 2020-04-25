@@ -21,7 +21,7 @@ exports.handler = function(event, context, callback) {
       auth:{
         "user": process.env.SNIPCART_PRIVATE_KEY
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(res)
     });
 
     console.log(data);
