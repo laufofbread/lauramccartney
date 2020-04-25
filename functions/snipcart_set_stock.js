@@ -15,8 +15,10 @@ exports.handler = function(event, context, callback) {
       method:'GET',
       headers:{
         "Content-Type": "application/json",
-        "user": process.env.SNIPCART_PRIVATE_KEY
       },
+      auth:{
+        "user": process.env.SNIPCART_PRIVATE_KEY
+      }
       body: JSON.stringify(data)
     }).then((data) => {
 
