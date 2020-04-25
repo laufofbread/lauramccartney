@@ -7,6 +7,9 @@ exports.handler = function(event, context, callback) {
     });
   }
 
+  console.log(event);
+  console.log(context);
+
   fetch('https://app.snipcart.com/api/products',
     {
       method:'GET',
@@ -16,10 +19,9 @@ exports.handler = function(event, context, callback) {
       },
       body: JSON.stringify(data)
     }).then((data) => {
-      console.log(event);
-      console.log(context);
 
-      callback(null, {
+
+      return callback(null, {
       	statusCode: 200,
       	headers: {
       		"Content-Type": "application/json"
