@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 exports.handler = function(event, context, callback) {
-  
+
   if(event.httpMethod !== 'GET') {
     return callback(null, {
       statusCode: 200,
@@ -13,13 +13,11 @@ exports.handler = function(event, context, callback) {
     {
       method:'GET',
       headers:{
-        "Content-Type": "application/json"
-      },
-      auth:{
-        "user": process.env.SNIPCART_PRIVATE_KEY
+        "Content-Type": "application/json",
+        "Authorization": `Basic ${process.env.SNIPCART_PRIVATE_KEY}`
       }
     }).then((data) => {
-      console.log(process.env.SNIPCART_PRIVATE_KEY);
+      console.log(data);
 
       return callback(null, {
       	statusCode: 200,
