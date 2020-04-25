@@ -116,15 +116,15 @@ const Gallery = props => {
 
       <section className={styles.grid}>
 
-        <div className={styles.paragraphOne}>
+        <div className={`${styles.paragraphOne} ${styles.paragraph}`}>
           <BlockContent blocks={page._rawParagraphOne} />
         </div>
 
-        <div className={styles.paragraphTwo}>
+        <div className={`${styles.paragraphTwo} ${styles.paragraph}`}>
           <BlockContent blocks={page._rawParagraphTwo} />
         </div>
 
-        <div className={styles.paragraphThree}>
+        <div className={`${styles.paragraphThree} ${styles.paragraph}`}>
           <BlockContent blocks={page._rawParagraphThree} />
         </div>
 

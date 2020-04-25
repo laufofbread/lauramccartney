@@ -1,12 +1,8 @@
-.paragraphOne,
-.paragraphTwo,
-.paragraphThree {
+.paragraph {
   font-family: var(--font-secondary), serif;
 }
 
-.paragraphOne p,
-.paragraphTwo p,
-.paragraphThree p {
+.paragraph p {
   font-size: 1.5rem;
 }
 
@@ -25,9 +21,7 @@
       grid-gap: var(--grid-gap);
   }
 
-  .paragraphOne,
-  .paragraphTwo,
-  .paragraphThree {
+  .paragraph {
     display: flex;
     align-items: center;
   }
