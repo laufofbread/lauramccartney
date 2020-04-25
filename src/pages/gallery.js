@@ -129,29 +129,29 @@ const Gallery = props => {
         </div>
 
 
-        <Img className={styles.imageOne} fluid={page.imageOne.asset.fluid} />
+        <Img className={`${styles.imageOne} ${styles.image}`} fluid={page.imageOne.asset.fluid} />
 
-        <Img className={styles.imageTwo} fluid={page.imageTwo.asset.fluid} />
+        <Img className={`${styles.imageTwo} ${styles.image}`} fluid={page.imageTwo.asset.fluid} />
 
-        <Img className={styles.imageThree} fluid={page.imageThree.asset.fluid} />
+        <Img className={`${styles.imageThree} ${styles.image}`} fluid={page.imageThree.asset.fluid} />
 
-        <Img className={styles.imageFour} fluid={page.imageFour.asset.fluid} />
+        <Img className={`${styles.imageFour} ${styles.image}`} fluid={page.imageFour.asset.fluid} />
 
-        <Img className={styles.imageFive} fluid={page.imageFive.asset.fluid} />
+        <Img className={`${styles.imageFive} ${styles.image}`} fluid={page.imageFive.asset.fluid} />
 
-        <Img className={styles.imageSix} fluid={page.imageSix.asset.fluid} />
+        <Img className={`${styles.imageSix} ${styles.image}`} fluid={page.imageSix.asset.fluid} />
 
-        <Img className={styles.imageSeven} fluid={page.imageSeven.asset.fluid} />
+        <Img className={`${styles.imageSeven} ${styles.image}`} fluid={page.imageSeven.asset.fluid} />
 
-        <Img className={styles.imageEight} fluid={page.imageEight.asset.fluid} />
+        <Img className={`${styles.imageEight} ${styles.image}`} fluid={page.imageEight.asset.fluid} />
 
-        <Img className={styles.imageNine} fluid={page.imageNine.asset.fluid} />
+        <Img className={`${styles.imageNine} ${styles.image}`} fluid={page.imageNine.asset.fluid} />
 
-        <Img className={styles.imageTen} fluid={page.imageTen.asset.fluid} />
+        <Img className={`${styles.imageTen} ${styles.image}`} fluid={page.imageTen.asset.fluid} />
 
-        <Img className={styles.imageEleven} fluid={page.imageEleven.asset.fluid} />
+        <Img className={`${styles.imageEleven} ${styles.image}`} fluid={page.imageEleven.asset.fluid} />
 
-        <Img className={styles.imageTwelve} fluid={page.imageTwelve.asset.fluid} />
+        <Img className={`${styles.imageTwelve} ${styles.image}`} fluid={page.imageTwelve.asset.fluid} />
 
       </section>
     </Layout>
