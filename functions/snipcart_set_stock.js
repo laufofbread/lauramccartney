@@ -10,9 +10,7 @@ exports.handler = function(event, context, callback) {
     });
   }
 
-
-
-  fetch('https://app.snipcart.com/api/products',
+  return fetch('https://app.snipcart.com/api/products',
     {
       method:'GET',
       headers:{
@@ -22,16 +20,5 @@ exports.handler = function(event, context, callback) {
         "user": process.env.SNIPCART_PRIVATE_KEY
       },
       body: JSON.stringify(data)
-    }).then((data) => {
-
-
-      return callback(null, {
-      	statusCode: 200,
-      	headers: {
-      		"Content-Type": "application/json"
-      	},
-      	body: JSON.stringify(data),
-      });
-
     })
 }
