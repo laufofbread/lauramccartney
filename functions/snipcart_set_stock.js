@@ -19,5 +19,7 @@ exports.handler = function(event, context, callback) {
       }
     })
     .then(res => res.json())
-	  .then(json => console.log(json));
+    .then(json => console.log(json));
+
+
 }
