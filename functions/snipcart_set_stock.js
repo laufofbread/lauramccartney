@@ -20,14 +20,15 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
-
-      callback(null, {
-      	statusCode: 200,
-      	headers: {
-          "Access-Control-Allow-Origin" : "*",
-          'Content-Type': 'application/json'
-      	},
-      	body: json
-      });
+      console.log(typeof json);
+console.log(json);
+      // callback(null, {
+      // 	statusCode: 200,
+      // 	headers: {
+      //     "Access-Control-Allow-Origin" : "*",
+      //     'Content-Type': 'application/json'
+      // 	},
+      // 	body: json
+      // });
     });
 }

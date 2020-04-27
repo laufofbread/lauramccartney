@@ -45,12 +45,7 @@ const Shop = props => {
   }
 
   useEffect(() => {
-      fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_set_stock`, {
-        headers : {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-         }
-      })
+      fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_set_stock`)
       .then(response => {
         console.log("response = "+ response);
         if (response.status !== 200) {
