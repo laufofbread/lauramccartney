@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
     });
   }
 
-  const response = fetch('https://app.snipcart.com/api/products',
+  fetch('https://app.snipcart.com/api/products',
     {
       method:'GET',
       headers:{
@@ -20,14 +20,6 @@ exports.handler = function(event, context, callback) {
     }).then((data) => {
       console.log(data);
 
-      return callback(null, {
-      	statusCode: 200,
-      	headers: {
-      		"Content-Type": "application/json"
-      	},
-      	body: JSON.stringify(data),
-      });
+      return data.json
     });
-
-    return response
 }
