@@ -56,6 +56,7 @@ const Shop = props => {
         if (response.status !== 200) {
           return;
         }
+        console.log("response = "+ JSON.stringify(response));
 console.log("here");
         return response.json()
       })
