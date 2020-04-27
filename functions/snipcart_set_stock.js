@@ -18,7 +18,7 @@ exports.handler = function(event, context, callback) {
         "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
       }
     }).then((data) => {
-      console.log(data);
+      console.log(data.text());
 
       return data.json()
     });
