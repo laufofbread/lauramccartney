@@ -19,5 +19,5 @@ exports.handler = function(event, context, callback) {
       }
     })
     .then(res => res.json())
-    .then(json => callback(null, json));
+    .then(json => {console.log(json); return json};
 }
