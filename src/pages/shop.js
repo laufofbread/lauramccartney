@@ -56,11 +56,11 @@ const Shop = props => {
         if (response.status !== 200) {
           return;
         }
-
+console.log("here");
         return response.json()
       })
       .then(result => {
-        console.log("response = "+result);
+        console.log("result = "+result);
         setStockLevel(result)
       })
       .catch(function(err) {
