@@ -58,7 +58,7 @@ const Shop = props => {
         }
         console.log("response = "+ JSON.stringify(response));
 console.log("here");
-        return response.json()
+        return response.text()
       })
       .then(result => {
         console.log("result = "+result);
