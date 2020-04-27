@@ -26,7 +26,7 @@ exports.handler = function(event, context, callback) {
       	headers: {
       		"Content-Type": "application/json"
       	},
-      	body: JSON.stringify(json.items),
+      	body: json.items,
       });
     });
 }
