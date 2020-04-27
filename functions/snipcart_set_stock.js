@@ -20,13 +20,6 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
-
-      callback(null, {
-      	statusCode: 200,
-      	headers: {
-      		"Content-Type": "application/json"
-      	},
-      	body: JSON.stringify(json.items),
-      });
+      return json.items
     });
 }
