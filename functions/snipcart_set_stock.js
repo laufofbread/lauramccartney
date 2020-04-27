@@ -15,7 +15,7 @@ exports.handler = function(event, context, callback) {
       headers:{
         "Accept": "application/json",
         "Content-Type": "application/json",
-        "Authorization": `Basic ${window.btoa(process.env.SNIPCART_PRIVATE_KEY + '.')}`
+        "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
       }
     }).then((data) => {
       console.log(data);
