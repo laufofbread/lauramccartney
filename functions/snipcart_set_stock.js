@@ -20,6 +20,6 @@ exports.handler = function(event, context, callback) {
     }).then((data) => {
       console.log(data);
 
-      return data.json
+      return data.json()
     });
 }
