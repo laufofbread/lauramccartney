@@ -8,6 +8,7 @@
   text-decoration: none;
   font-weight: var(--font-light);
   margin-right: 1rem;
+  position: relative;
 }
 
 .navigation a:hover {
@@ -55,6 +56,28 @@
 .response {
   font-size: 1rem;
   color: var(--black);
+}
+
+.cart-count {
+  position: absolute;
+  top: -41%;
+  left: 80%;
+  background-color: var(--black);
+  color: var(--white);
+  border-radius: 50%;
+  font-size: .5em;
+  padding: 2px;
+  width: 1.8em;
+  height: 1.8em;
+  text-align: center;
+  line-height: 1.4;
+  outline: 0;
+  border: 0;
+}
+
+.cart-count:hover {
+    background-color: var(--light-grey);
+    cursor: pointer;
 }
 
 @media (min-width: 760px) {

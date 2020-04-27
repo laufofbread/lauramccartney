@@ -10,7 +10,6 @@ const ProductGallery = (props) => {
   const [activeThumb, setActiveThumb] = useState(0);
 
   const changeImage = (image, i) => {
-    console.log(i);
     setActiveImage(image);
     setActiveThumb(i)
   }
