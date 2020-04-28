@@ -23,6 +23,7 @@ exports.handler = function(event, context, callback) {
       let items = json.items;
       for (var i = 0; i < items.length; i++) {
         console.log(items[i]);
+        console.log(items[i].hasOwnProperty('stock'));
 
         if(!items[i].hasOwnProperty('stock')) {
 
@@ -36,9 +37,10 @@ exports.handler = function(event, context, callback) {
               },
               body: JSON.stringify({'stock': 1})
           })
+          .catch(err => {console.log("PUT Error: "+ err)})
 
         }
       }
     })
-    .catch(err => {console.log("Error: "+ err)});
+    .catch(err => {console.log("Error: "+ err)})
 }
