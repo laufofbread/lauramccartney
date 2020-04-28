@@ -25,7 +25,7 @@ exports.handler = function(event, context, callback) {
 
         if(!items[i].hasOwnProperty('stock')) {
 
-          fetch(`https://app.snipcart.com/api/${items[i].id}`,
+          fetch(`https://app.snipcart.com/api/products/${items[i].id}`,
             {
               method:'PUT',
               headers:{
