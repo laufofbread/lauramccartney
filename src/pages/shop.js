@@ -1,4 +1,4 @@
-import React, { useEffect } from "react"
+import React, { useState, useEffect } from "react"
 import { graphql } from 'gatsby'
 import Img from "gatsby-image"
 import { Link } from "gatsby"
@@ -37,27 +37,27 @@ export const query = graphql`
 const Shop = props => {
   const { data, errors } = props
 
-  if (errors) {
-    throw errors
-  }
-
   const productNodes =
     data && data.products && mapEdgesToNodes(data.products)
 
+  const [ products, setProducts ] = useState(productNodes)
 
+  if (errors) {
+    throw errors
+  }
 
   const setStockLevel = (snipArray) => {
     for (var i = 0; i < snipArray.length; i++) {
       if (snipArray[i].stock <= 0) {
         const id = snipArray[i].id;
-
         productNodes.find(p => p.slug.current === id).soldOut = true;
       }
     }
+    setProducts([...productNodes]);
   }
 
   useEffect(() => {
-      fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_get_stock`)
+    fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_get_stock`)
       .then(response => {
         if (response.status !== 200) {
           return;
@@ -71,7 +71,8 @@ const Shop = props => {
         throw err
       }
     );
-  })
+  }, []);
+
 
 
   return (
@@ -79,7 +80,7 @@ const Shop = props => {
       <SEO title="Shop" />
 
       <section className={styles.shopGrid}>
-        {productNodes.map((node, i) =>  (
+        {products.map((node, i) =>  (
           <Link key={i}
                 className={styles.product}
                 to={`/shop/${node.slug.current}`}

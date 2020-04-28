@@ -12,7 +12,8 @@ const BuyButton = (props) => {
             data-item-weight={product.weight}
             data-item-description={product.description}
             data-item-image={product.images[0].asset.url}
-            data-item-has-taxes-included="true">
+            data-item-has-taxes-included="true"
+            data-item-max-quantity="1">
             Add to cart
     </button>
   )
