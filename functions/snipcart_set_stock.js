@@ -23,7 +23,6 @@ exports.handler = function(event, context, callback) {
       let items = json.items;
       for (var i = 0; i < items.length; i++) {
         console.log(items[i]);
-        console.log(items[i].hasOwnProperty('stock'));
 
         if(!items[i].hasOwnProperty('stock')) {
 
