@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from 'gatsby'
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -14,6 +15,7 @@ const ProductPage = ({ data, pageContext, location }) => {
   return (
     <Layout>
       <SEO title={product.title} />
+      <Link to="/shop" className={styles.backLink}> Back to shop</Link>
       <div className={styles.productWrapper}>
         <ProductGallery images={product.images} />
 
