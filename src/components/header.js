@@ -1,7 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
-import ShopCount from "./shop-count.js"
 
 import styles from "../styles/nav.module.css"
 
@@ -22,7 +21,6 @@ const Header = ({ siteTitle }) => (
       </Link>
       <Link to="/shop" activeClassName={styles.active}>
         Shop
-        <ShopCount />
       </Link>
     </nav>
   </header>

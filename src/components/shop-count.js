@@ -7,7 +7,9 @@ const ShopCount = () => {
   const [count, setCount] = useState(snipCount);
 
   useEffect(() => {
-      setCount(window.Snipcart.store.getState().cart.items.length);
+    const newCount = window.Snipcart.store.getState().cart.items.length
+      setCount(newCount);
+
   })
 
     return (
