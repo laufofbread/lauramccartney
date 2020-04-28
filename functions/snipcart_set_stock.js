@@ -27,7 +27,7 @@ exports.handler = function(event, context, callback) {
 
         if(!items[i].hasOwnProperty('stock')) {
 
-          fetch(`https://app.snipcart.com/api/${items[i]}`,
+          fetch(`https://app.snipcart.com/api/${items[i].userDefinedId}`,
             {
               method:'PUT',
               headers:{
@@ -36,7 +36,7 @@ exports.handler = function(event, context, callback) {
                 "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
               },
               body: JSON.stringify({'stock': 1})
-            })
+          })
 
         }
       }
