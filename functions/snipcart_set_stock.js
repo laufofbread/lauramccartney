@@ -23,9 +23,9 @@ exports.handler = function(event, context, callback) {
       let items = json.items;
       for (var i = 0; i < items.length; i++) {
         console.log(items[i]);
-        console.log(items[i].hasOwnProperty(stock));
+        console.log(items[i].hasOwnProperty('stock'));
 
-        if(!items[i].hasOwnProperty(stock)) {
+        if(!items[i].hasOwnProperty('stock')) {
 
           fetch(`https://app.snipcart.com/api/${items[i]}`,
             {
@@ -35,10 +35,11 @@ exports.handler = function(event, context, callback) {
                 "Content-Type": "application/json",
                 "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
               },
-              body: JSON.stringify({stock: 1})
+              body: JSON.stringify({'stock': 1})
             })
 
         }
       }
-    });
+    })
+    .catch(err => console.log("Error: "+ err););
 }
