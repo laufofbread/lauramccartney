@@ -5,6 +5,7 @@ import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import { mapEdgesToNodes } from '../lib/helpers'
 
 import styles from "../styles/shop.module.css"
 
@@ -40,27 +41,34 @@ const Shop = props => {
     throw errors
   }
 
-  const setStockLevel = (products) => {
-    // console.log(products);
+  const productNodes =
+    data && data.products && mapEdgesToNodes(data.products)
+
+
+
+  const setStockLevel = (snipArray) => {
+    for (var i = 0; i < snipArray.length; i++) {
+      if (snipArray[i].stock <= 0) {
+        const id = snipArray[i].id;
+
+        productNodes.find(p => p.slug.current === id).soldOut = true;
+      }
+    }
   }
 
   useEffect(() => {
       fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_get_stock`)
       .then(response => {
-        console.log("response = "+ response);
         if (response.status !== 200) {
           return;
         }
-        console.log("response = "+ JSON.stringify(response));
-console.log("here");
-        return response.text()
+        return response.json()
       })
       .then(result => {
-        console.log("result = "+result);
         setStockLevel(result)
       })
       .catch(function(err) {
-        console.log("err = "+err);
+        throw err
       }
     );
   })
@@ -71,9 +79,15 @@ console.log("here");
       <SEO title="Shop" />
 
       <section className={styles.shopGrid}>
-        {data.products.edges.map(({ node }, i) =>  (
-          <Link key={i} className={styles.product} to={`/shop/${node.slug.current}`}>
+        {productNodes.map((node, i) =>  (
+          <Link key={i}
+                className={styles.product}
+                to={`/shop/${node.slug.current}`}
+                style={node.soldOut === true ? {pointerEvents: "none"} : null}>
             <div className={styles.imgWrapper}>
+              {(node.soldOut === true) &&
+                <p className={styles.tag}>Sold</p>
+              }
               <Img fluid={node.images[0].asset.fluid} />
             </div>
             <h3 className={styles.shopTitle}>{node.title}</h3>
