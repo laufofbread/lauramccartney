@@ -20,20 +20,30 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
-      var stock = json.items.map((product) => {
-      	return {
-      		id: product.userDefinedId,
-          stock: product.stock
-      	};
-      });
+      let items = json.items;
+      for (var i = 0; i < items.length; i++) {
 
-      callback(null, {
-      	statusCode: 200,
-      	headers: {
-          "Access-Control-Allow-Origin" : "*",
-          'Content-Type': 'application/json'
-      	},
-      	body: JSON.stringify(stock)
-      });
-    });
+        if(!items[i].hasOwnProperty('stock')) {
+
+          fetch(`https://app.snipcart.com/api/products/${items[i].id}`,
+            {
+              method:'PUT',
+              headers:{
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
+              },
+              body: JSON.stringify({
+                'inventoryManagementMethod': 'Single',
+                'stock': 1,
+                'allowOutOfStockPurchases': false
+              })
+          })
+          .then(res => { console.log(res) })
+          .catch(err => { console.log("PUT Error: "+ err) });
+
+        }
+      }
+    })
+    .catch(err => {console.log("Error: "+ err)})
 }
