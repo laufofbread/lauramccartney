@@ -40,5 +40,5 @@ exports.handler = function(event, context, callback) {
         }
       }
     })
-    .catch(err => console.log("Error: "+ err););
+    .catch(err => {console.log("Error: "+ err)});
 }
