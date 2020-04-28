@@ -1,5 +1,7 @@
 .paragraph {
   font-family: var(--font-secondary), serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .paragraph p {
