@@ -35,8 +35,14 @@ exports.handler = function(event, context, callback) {
                 "Content-Type": "application/json",
                 "Authorization": `Basic ${Buffer.from(process.env.SNIPCART_PRIVATE_KEY).toString('base64')}`
               },
-              body: JSON.stringify({'stock': 1})
+              body: JSON.stringify({
+                'inventoryManagementMethod': 'Single',
+                'stock': 1,
+                'allowOutOfStockPurchases': false
+              })
           })
+          .then(res => res.json())
+          .then(json => {console.log("JSON: "+ json)})
           .catch(err => {console.log("PUT Error: "+ err)})
 
         }
