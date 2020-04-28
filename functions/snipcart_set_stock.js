@@ -20,7 +20,6 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
-      console.log(json);
       var stock = json.items.map((product) => {
       	return {
       		id: product.userDefinedId,
