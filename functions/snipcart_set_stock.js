@@ -20,13 +20,20 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
+      var stock = json.map((product) => {
+      	return {
+      		id: product.userDefinedId,
+          stock: product.stock
+      	};
+      });
+
       callback(null, {
       	statusCode: 200,
       	headers: {
           "Access-Control-Allow-Origin" : "*",
           'Content-Type': 'application/json'
       	},
-      	body: JSON.stringify(json)
+      	body: JSON.stringify(stock)
       });
     });
 }
