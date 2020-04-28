@@ -22,8 +22,6 @@ exports.handler = function(event, context, callback) {
     .then(json => {
       let items = json.items;
       for (var i = 0; i < items.length; i++) {
-        console.log(items[i]);
-        console.log(items[i].hasOwnProperty('stock'));
 
         if(!items[i].hasOwnProperty('stock')) {
 
@@ -38,12 +36,12 @@ exports.handler = function(event, context, callback) {
               body: JSON.stringify({
                 'inventoryManagementMethod': 'Single',
                 'stock': 1,
-                'allowOutOfStockPurchases': false
+                'allowOutOfStockPurchases': false,
               })
           })
           .then(res => res.json())
-          .then(json => {console.log("JSON: "+ json)})
-          .catch(err => {console.log("PUT Error: "+ err)})
+          .then(json => { console.log("JSON: "+ json) })
+          .catch(err => { console.log("PUT Error: "+ err) });
 
         }
       }
