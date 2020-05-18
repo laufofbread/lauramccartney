@@ -9,7 +9,7 @@ exports.handler = function(event, context, callback) {
     });
   }
 
-  fetch('https://app.snipcart.com/api/products',
+  fetch('https://app.snipcart.com/api/products?limit=100',
     {
       method:'GET',
       headers:{
@@ -20,7 +20,6 @@ exports.handler = function(event, context, callback) {
     })
     .then(res => res.json())
     .then(json => {
-      console.log(json.items);
       var stock = json.items.map((product) => {
       	return {
       		id: product.userDefinedId,
