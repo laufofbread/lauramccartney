@@ -26,7 +26,9 @@ exports.handler = function(event, context, callback) {
     body: {
       fetchUrl: 'https://www.lauramccartney.co.uk/.netlify/functions/snipcart_crawler',
     }
-  }).then(() => {
+  }).then((res) => {
+
+    console.log('post res ' + res);
     fetch(url ,
       {
         method:'GET',
