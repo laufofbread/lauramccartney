@@ -26,8 +26,9 @@ exports.handler = function(event, context, callback) {
   })
   .then((res) => res.json())
   .then((result) => {
-    console.log(JSON.stringify(result));
-    
+    let jsonres = JSON.parse(result);
+    console.log(jsonres);
+
     fetch(url ,
       {
         method:'GET',
