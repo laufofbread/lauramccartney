@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 
 exports.handler = function(event, context, callback) {
+  console.log('here');
 
   if(event.httpMethod !== 'GET' || event.httpMethod !== 'POST' || !event.body) {
     return callback(null, {
