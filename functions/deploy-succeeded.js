@@ -1,9 +1,6 @@
 const fetch = require('node-fetch');
 
 exports.handler = function(event, context, callback) {
-  console.log('here');
-  console.log('http '+event.httpMethod);
-  console.log('body '+event.body);
 
   if(event.httpMethod !== 'GET' && event.httpMethod !== 'POST') {
     return callback(null, {
@@ -28,7 +25,6 @@ exports.handler = function(event, context, callback) {
     }
   }).then((res) => {
 
-    console.log('post res ' + res);
     fetch(url ,
       {
         method:'GET',
