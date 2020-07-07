@@ -25,6 +25,8 @@ exports.handler = function(event, context, callback) {
     }
   }).then((res) => {
 
+    console.log('res ' +res.json());
+
     fetch(url ,
       {
         method:'GET',
