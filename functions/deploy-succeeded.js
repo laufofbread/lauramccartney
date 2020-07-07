@@ -5,7 +5,7 @@ exports.handler = function(event, context, callback) {
   console.log('http '+event.httpMethod);
   console.log('body '+event.body);
 
-  if(event.httpMethod !== 'GET' || event.httpMethod !== 'POST' || !event.body) {
+  if(event.httpMethod !== 'GET' && event.httpMethod !== 'POST') {
     return callback(null, {
       statusCode: 200,
       body: ''
