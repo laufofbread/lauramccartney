@@ -46,15 +46,7 @@ const Shop = props => {
     throw errors
   }
 
-  const setStockLevel = (snipArray) => {
-    for (var i = 0; i < snipArray.length; i++) {
-      if (snipArray[i].stock <= 0) {
-        const id = snipArray[i].id;
-        productNodes.find(p => p.slug.current === id).soldOut = true;
-      }
-    }
-    setProducts([...productNodes]);
-  }
+
 
   useEffect(() => {
     fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_get_stock`)
@@ -65,13 +57,22 @@ const Shop = props => {
         return response.json()
       })
       .then(result => {
+        const setStockLevel = (snipArray) => {
+          for (var i = 0; i < snipArray.length; i++) {
+            if (snipArray[i].stock <= 0) {
+              const id = snipArray[i].id;
+              productNodes.find(p => p.slug.current === id).soldOut = true;
+            }
+          }
+          setProducts([...productNodes]);
+        }
         setStockLevel(result)
       })
       .catch(function(err) {
         throw err
       }
     );
-  }, []);
+  }, [productNodes]);
 
 
 

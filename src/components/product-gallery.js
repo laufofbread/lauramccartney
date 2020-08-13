@@ -20,11 +20,12 @@ const ProductGallery = (props) => {
       <Img className={styles.galleryActive} fluid={activeImage.asset.fluid}/>
 
       {images.map((image, i) =>  (
-        <figure className={`${styles.galleryThumbnail} ${activeThumb === i ? styles.active : ''}`}
+
+        <button className={`${styles.galleryThumbnail} ${activeThumb === i ? styles.active : ''}`}
                 key={i}
                 onClick={() => changeImage(image, i)}>
           <Img fluid={image.asset.fluid}/>
-        </figure>
+        </button>
       ))}
 
     </section>
