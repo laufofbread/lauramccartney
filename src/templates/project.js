@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import PageBuilder from "../components/page-builder"
 
 import styles from "../styles/project.module.css"
 
@@ -12,15 +13,11 @@ const ProjectPage = ({ data, pageContext, location }) => {
   return (
     <Layout>
       <SEO title={project.title} />
-      <div>
+      <section>
 
+        <PageBuilder pageBuilder={project.pageBuilder} _rawPageBuilder={project._rawPageBuilder} />
 
-        <section>
-
-
-
-        </section>
-      </div>
+      </section>
     </Layout>
   )
 }
