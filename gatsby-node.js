@@ -1,7 +1,7 @@
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
-  const result = await graphql(`
+  const productResult = await graphql(`
     {
       allSanityProduct {
         edges {
@@ -14,16 +14,42 @@ exports.createPages = async ({ graphql, actions }) => {
       }
     }
   `)
-  if (result.errors) {
-    throw result.errors
+  const projectResult = await graphql(`
+    {
+      allSanityProject {
+        edges {
+          node {
+            slug {
+              current
+            }
+          }
+        }
+      }
+    }
+  `)
+  if (productResult.errors) {
+    throw productResult.errors
   }
-  const products = result.data.allSanityProduct.edges || []
+  if (projectResult.errors) {
+    throw projectResult.errors
+  }
+  const products = productResult.data.allSanityProduct.edges || []
   products.forEach((edge, index) => {
     const slug = edge.node.slug.current;
     const path = `/shop/${slug}`
     createPage({
       path,
       component: require.resolve("./src/templates/product.js"),
+      context: { slug : slug },
+    })
+  })
+  const projects = projectResult.data.allSanityProject.edges || []
+  projects.forEach((edge, index) => {
+    const slug = edge.node.slug.current;
+    const path = `/project/${slug}`
+    createPage({
+      path,
+      component: require.resolve("./src/templates/project.js"),
       context: { slug : slug },
     })
   })
