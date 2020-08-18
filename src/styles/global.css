@@ -69,6 +69,18 @@ img {
   margin: 0;
 }
 
+.sm-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.xsm-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .btn {
   appearance: none;
   background-color: var(--secondary);
@@ -114,9 +126,19 @@ input[type=email] {
   color: var(--white);
 }
 
+.content-wrapper {
+  margin-bottom: var(--grid-gap);
+}
+
 @media (min-width: 600px) {
   :root {
     --container-padding: 2rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-gap: var(--grid-gap);
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -124,11 +146,14 @@ input[type=email] {
   :root {
     --root-font-size: 16px;
   }
+
+  .grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
 @media (min-width: 1440px) {
   :root {
     --container-padding: 3rem;
-    --grid-gap: 3rem;
   }
 }

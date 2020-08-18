@@ -35,8 +35,10 @@ const AboutPage = props => {
   return (
       <Layout>
         <SEO title="About" />
-        <section className={styles.container}>
+        <section className="sm-container">
           <Img fluid={page.image.asset.fluid} />
+        </section>
+        <section className="xsm-container">
           <BlockContent className={styles.text} blocks={page._rawText} />
         </section>
       </Layout>

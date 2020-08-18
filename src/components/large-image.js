@@ -5,7 +5,7 @@ const LargeImage = ({block, raw}) => {
   const {altImage} = block
 
   return (
-    <section>
+    <section className="content-wrapper sm-container">
       <Img
         fluid={altImage.image.asset.fluid || null}
         alt={altImage.alt}

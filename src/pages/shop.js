@@ -80,7 +80,7 @@ const Shop = props => {
     <Layout>
       <SEO title="Shop" />
 
-      <section className={styles.shopGrid}>
+      <section className="grid grid-3">
         {products.map((node, i) =>  (
           <Link key={i}
                 className={styles.product}

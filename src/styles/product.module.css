@@ -14,6 +14,11 @@
   width: calc(20% - .2rem);
   margin: .1rem;
   cursor: pointer;
+  appearance: none;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
 }
 
 .active {

@@ -5,7 +5,7 @@ const TwoImageRow = ({block}) => {
   const {imageOne, imageTwo} = block
 
   return (
-    <section>
+    <section className="content-wrapper grid">
       <Img
         fluid={imageOne.image.asset.fluid || null}
         alt={imageOne.alt}

@@ -43,7 +43,7 @@ const Projects = props => {
     <Layout>
       <SEO title="Projects" />
 
-      <section className={styles.projectGrid}>
+      <section className="grid">
         {projectNodes.map((node, i) =>  (
           <Link key={i}
                 className={styles.project}

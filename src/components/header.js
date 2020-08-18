@@ -16,14 +16,14 @@ const Header = ({ siteTitle }) => (
       <Link to="/gallery" activeClassName={styles.active}>
         Gallery
       </Link>
+      <Link to="/projects" activeClassName={styles.active}>
+        Projects
+      </Link>
       <Link to="/about" activeClassName={styles.active}>
         About
       </Link>
       <Link to="/shop" activeClassName={styles.active}>
         Shop
-      </Link>
-      <Link to="/projects" activeClassName={styles.active}>
-        Projects
       </Link>
     </nav>
   </header>

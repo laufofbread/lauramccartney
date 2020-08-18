@@ -6,7 +6,7 @@ const TextContent = ({block, raw}) => {
   const {title, image} = block
 console.log(raw);
   return (
-    <section>
+    <section className="content-wrapper xsm-container">
         <BlockContent blocks={raw.text} />
     </section>
   )
