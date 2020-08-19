@@ -32,6 +32,7 @@ const Projects = props => {
   const projectNodes =
     data && data.projects && mapEdgesToNodes(data.projects)
 
+  projectNodes.reverse();
 
   if (errors) {
     throw errors
