@@ -8,7 +8,7 @@ export const altFragment = graphql`
     alt
     image {
       asset {
-        fluid(maxWidth: 800) {
+        fluid(maxWidth: 1000) {
           ...GatsbySanityImageFluid
         }
       }
