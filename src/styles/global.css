@@ -46,7 +46,7 @@ img {
   width: 100%;
 }
 
-p {
+p, blockquote {
   font-size: 1.3rem;
   line-height: 1.5;
   color: var(--dark-grey);
@@ -67,6 +67,22 @@ p a {
 
 img {
   margin: 0;
+}
+
+blockquote {
+  border-left: var(--underline) solid var(--secondary);
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+blockquote + p {
+  margin-top: .5rem;
+}
+
+em {
+  font-family: var(--font-secondary), serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .sm-container {
@@ -130,6 +146,40 @@ input[type=email] {
   margin-bottom: var(--grid-gap);
 }
 
+.grid-item {
+  display: block;
+  text-align: center;
+  margin-bottom: var(--container-padding);
+}
+
+.grid-item:hover .img-wrapper {
+  box-shadow: 0px var(--underline) 0px 0px var(--secondary);
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.grid-item-title {
+  font-size: 1.4rem;
+  font-weight: var(--font-light);
+  margin: 1rem 0 0 0;
+  color: var(--black);
+}
+
+.grid-item-secondary {
+  margin: 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .grid  .gatsby-image-wrapper:nth-child(2) {
+    margin-top: var(--grid-gap);
+  }
+}
+
 @media (min-width: 600px) {
   :root {
     --container-padding: 2rem;
@@ -139,6 +189,10 @@ input[type=email] {
     display: grid;
     grid-gap: var(--grid-gap);
     grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-item {
+    margin-bottom: 0;
   }
 }
 

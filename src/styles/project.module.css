@@ -1,7 +1,0 @@
-@media (min-width: 600px) {
-  .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: var(--container-padding);
-  }
-}

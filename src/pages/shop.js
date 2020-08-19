@@ -83,17 +83,17 @@ const Shop = props => {
       <section className="grid grid-3">
         {products.map((node, i) =>  (
           <Link key={i}
-                className={styles.product}
+                className="grid-item"
                 to={`/shop/${node.slug.current}`}
                 style={node.soldOut === true ? {pointerEvents: "none"} : null}>
-            <div className={styles.imgWrapper}>
+            <div className="img-wrapper">
               {(node.soldOut === true) &&
                 <p className={styles.tag}>Sold</p>
               }
               <Img fluid={node.images[0].asset.fluid} />
             </div>
-            <h3 className={styles.shopTitle}>{node.title}</h3>
-            <p className={styles.shopPrice}>£{node.price}</p>
+            <h3 className="grid-item-title">{node.title}</h3>
+            <p className="grid-item-secondary">£{node.price}</p>
           </Link>
         ))}
       </section>
