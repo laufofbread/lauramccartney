@@ -46,6 +46,7 @@ const IndexPage = props => {
             <div className={styles.headline}>
               <BlockContent blocks={page._rawText} />
             </div>
+            <div class={styles.overlay}></div>
         </BackgroundImage>
         <SEO title="Home" />
       </Layout>
