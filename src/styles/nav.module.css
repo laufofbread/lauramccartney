@@ -41,6 +41,11 @@
   margin: var(--container-padding) 0 0 0;
 }
 
+.footer label {
+  max-width: 350px;
+  margin: auto;
+}
+
 .footer label,
 .footer input {
   display: block;
@@ -50,7 +55,7 @@
 .footer input {
   width: 100%;
   max-width: 250px;
-  margin: .7rem auto;
+  margin: 1rem auto .7rem auto;
 }
 
 .response {
