@@ -23,6 +23,8 @@ const ProductPage = ({ data, pageContext, location }) => {
           <h1 className={styles.title}>{product.title}</h1>
           <p className={styles.price}>£{product.price}</p>
           <p className={styles.description}>{product.description}</p>
+          
+          <p className={styles.secondaryInfo}>UK delivery is included in the price. For international shipping please contact me directly at <a href="mailto:hello@lauramccartney.co.uk">hello@lauramccartney.co.uk</a></p>
           <p className={styles.secondaryInfo}>
             Height { product.height }cm<br />
             Width { product.width }cm
