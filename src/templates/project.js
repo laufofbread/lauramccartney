@@ -11,7 +11,9 @@ const ProjectPage = ({ data, pageContext, location }) => {
   return (
     <Layout>
       <SEO title={project.title} />
-
+        <section className="content-wrapper xsm-container">
+            <h1 className="title"><span>{project.title}</span></h1>
+        </section>
         <PageBuilder pageBuilder={project.pageBuilder} _rawPageBuilder={project._rawPageBuilder} />
     </Layout>
   )

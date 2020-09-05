@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="email">Sign up to my newsletter:
+        <label htmlFor="email">For irregular updates and occasional love letters please sign up for my newsletter:
         <input
           id="email"
           placeholder="Enter your email address here..."

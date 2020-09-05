@@ -85,6 +85,15 @@ em {
   font-style: italic;
 }
 
+.title {
+  text-align: center;
+  font-weight: var(--font-book);
+}
+
+span {
+  box-shadow: 0px var(--underline) 0px 0px var(--black);
+}
+
 .sm-container {
   width: 100%;
   max-width: 800px;
