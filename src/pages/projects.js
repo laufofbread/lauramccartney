@@ -46,7 +46,7 @@ const Projects = props => {
         {projectNodes.map((node, i) =>  (
           <Link key={i}
                 className="grid-item"
-                to={`/project/${node.slug.current}`}>
+                to={`/projects/${node.slug.current}`}>
 
                 <div className="img-wrapper">
                   <Img fluid={node.altImage.image.asset.fluid} />
@@ -55,7 +55,6 @@ const Projects = props => {
           </Link>
         ))}
       </section>
-
     </Layout>
   )
 }

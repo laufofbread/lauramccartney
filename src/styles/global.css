@@ -141,6 +141,20 @@ input[type=email] {
   padding: var(--container-padding);
 }
 
+.back-link {
+  display: inline-block;
+  font-size: 1rem;
+  margin-bottom: .5rem;
+  font-weight: var(--font-light);
+}
+
+.back-link::before {
+  content: '\2039';
+  color: var(--secondary);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
 .homepage .logo-link,
 .homepage footer {
   display: none;

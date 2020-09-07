@@ -46,7 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
   const projects = projectResult.data.allSanityProject.edges || []
   projects.forEach((edge, index) => {
     const slug = edge.node.slug.current;
-    const path = `/project/${slug}`
+    const path = `/projects/${slug}`
     createPage({
       path,
       component: require.resolve("./src/templates/project.js"),
