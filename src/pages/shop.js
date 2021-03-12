@@ -47,7 +47,6 @@ const Shop = props => {
   }
 
 
-
   useEffect(() => {
     fetch(`https://www.lauramccartney.co.uk/.netlify/functions/snipcart_get_stock`)
       .then(response => {
@@ -61,7 +60,10 @@ const Shop = props => {
           for (var i = 0; i < snipArray.length; i++) {
             if (snipArray[i].stock <= 0) {
               const id = snipArray[i].id;
-              productNodes.find(p => p.slug.current === id).soldOut = true;
+              let sold = productNodes.find(p => p.slug.current === id);
+              if (sold) {
+                sold.soldOut = true
+              }
             }
           }
           setProducts([...productNodes]);
