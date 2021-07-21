@@ -19,7 +19,6 @@ export const query = graphql`
             current
           }
           price
-          stock
           images {
             asset {
               fluid(maxWidth: 400) {
