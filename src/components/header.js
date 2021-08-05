@@ -17,7 +17,7 @@ const Header = ({ siteTitle }) => (
         Gallery
       </Link>
       <Link to="/projects" activeClassName={styles.active} partiallyActive={true}>
-        Projects
+        Work
       </Link>
       <Link to="/about" activeClassName={styles.active} partiallyActive={true}>
         About

@@ -30,6 +30,7 @@ const ProductPage = ({ data, pageContext, location }) => {
           </p>
 
           <BuyButton product={product} />
+          <a href="#" className="snipcart-checkout">View cart</a>
 
           <details className={styles.tandc}>
             <summary>Terms &amp; Conditions</summary>

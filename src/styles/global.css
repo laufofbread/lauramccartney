@@ -197,6 +197,11 @@ input[type=email] {
   font-size: 1rem;
 }
 
+.snipcart-checkout {
+  margin-left: 1rem;
+  border-bottom: 1px solid var(--dark-grey);
+}
+
 @media (max-width: 600px) {
   .grid  .gatsby-image-wrapper:nth-child(2) {
     margin-top: var(--grid-gap);
