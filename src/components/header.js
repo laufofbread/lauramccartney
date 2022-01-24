@@ -22,6 +22,9 @@ const Header = ({ siteTitle }) => (
       <Link to="/about" activeClassName={styles.active} partiallyActive={true}>
         About
       </Link>
+      <Link to="/shop" activeClassName={styles.active} partiallyActive={true}>
+        Shop
+      </Link>
     </nav>
   </header>
 )
